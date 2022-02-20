@@ -1,15 +1,19 @@
 <template lang="pug">
-  Header
+.home
+  HeroStage
+  ImageAndText
+  ImageAndText(layoutAlignment="right")
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import Header from '~/components/header/Header.vue'
+import ImageAndText from '~/components/content/ImageAndText.vue'
+import HeroStage from '~/components/heroStage/HeroStage.vue'
 
 export default Vue.extend({
   name: 'IndexPage',
   components: {
-    Header
+    HeroStage, ImageAndText
   }
 })
 </script>
