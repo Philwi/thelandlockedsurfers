@@ -1,4 +1,5 @@
 import { createClient } from 'contentful'
+import { blogStore } from '@/plugins/store'
 
 const contentfulClient = createClient({
   accessToken: 'jEqzUW3jKC0Km0PvuH36pjaWLOCNnLKEnIZWobshKLw',
@@ -11,7 +12,10 @@ export const initContentfulEntries = () => {
   contentfulClient.getEntries({
       content_type: PRODUCT_CONTENT_TYPE_ID
     })
-    .then(function(entries) {
-      console.log(entries)
+    .then(function(entries: Array) {
+      const store = blogStore()
+      entries.items.forEach(entry => {
+        store.setBlogEntry(entry)
+      })
     })
 }

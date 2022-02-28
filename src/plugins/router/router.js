@@ -1,8 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { blogStore } from '@/plugins/store'
 import Index from '@/pages/Index.vue'
+import BlogIndex from '@/pages/BlogIndex.vue'
 
 const routes = [
-  { path: '/', component: Index }
+  { path: '/', component: Index },
+  { path: '/blog', component: BlogIndex }
 ]
 
 export const router = createRouter({
@@ -11,3 +14,6 @@ export const router = createRouter({
   routes, // short for `routes: routes`
 })
 
+router.beforeEach((to) => {
+  const store = blogStore()
+})
