@@ -3,38 +3,58 @@ nav.fixed.flex.justify-between.py-6.w-full.px-4.content-center.bg-secondary.z-10
   .flex.items-center
     img.h-4(src='../../assets/Logo_black.svg' alt='Logo')
   ul.font-montserrat.items-center.hidden(class='md:flex')
-    li.mx-3
-      a.growing-underline(href='howitworks')
-        | How it works
-    li.growing-underline.mx-3
-      a(href='features') Features
-    li.growing-underline.mx-3
-      a(href='pricing') Pricing
-  .font-montserrat.hidden(class='md:block')
+    template(v-for="link in navigationLinks")
+      li.growing-underline.mx-3
+        a(:href='link.path') {{ link.text }}
+  // .font-montserrat.hidden(class='md:block')
     button.mr-6 Login
     button.py-2.px-4.text-white.bg-black.rounded-3xl
       | Signup
-  #showMenu(class='md:hidden')
+  #showMenu.cursor-pointer(class='md:hidden' @click="toggleMenu")
     img(src='../../assets/logos/Menu.svg' alt='Menu icon')
 #mobileNav.hidden.px-4.py-6.fixed.top-0.left-0.h-full.w-full.bg-secondary.z-20.animate-fade-in-down
-  #hideMenu.flex.justify-end
+  #hideMenu.flex.justify-end.cursor-pointer(@click="toggleMenu")
     img.h-16.w-16(src='../../assets/logos/Cross.svg' alt='')
   ul.font-montserrat.flex.flex-col.mx-8.my-24.items-center.text-3xl
-    li.my-6
-      a(href='howitworks') How it works
-    li.my-6
-      a(href='features') Features
-    li.my-6
-      a(href='pricing') Pricing
+    template(v-for="link in navigationLinks")
+      li.my-6
+        a(:href='link.path') {{ link.text }}
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script setup lang="ts">
+  const navigationLinks = [
+    {
+      text: 'Home',
+      path: '/'
+    },
+    {
+      text: 'Blog',
+      path: '/blog'
+    },
+    {
+      text: 'Fitness',
+      path: '/fitness'
+    },
+    {
+      text: 'Ernährung',
+      path: '/ernaehrung'
+    },
+    {
+      text: 'Merch',
+      path: '/merch'
+    },
+  ]
 
-export default defineComponent({
-  setup() {
+let hideMenu = true
 
-  },
-})
-</script>
+const toggleMenu = function(): void {
+  hideMenu = !hideMenu
+
+  if (hideMenu) {
+    document.querySelector('#mobileNav')?.classList.remove('hidden')
+  } else {
+    document.querySelector('#mobileNav')?.classList.add('hidden')
+  }
+}
+  </script>
 
