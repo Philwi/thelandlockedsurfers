@@ -7,7 +7,7 @@
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "test": "jest",
-    "system-test": "cypress open"
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "vue": "^3.2.25",
