@@ -6,11 +6,14 @@ section.pt-24.flex.flex-col.justify-center.text-center.px-4.bg-secondary(class='
       span.bg-underline1.bg-left-bottom.bg-no-repeat.pb-2(class='bg-100%')
         | Surfers
     p.font-pt-serif.font-normal.mb-7
-      | Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum harum
-      | tempore consectetur voluptas, cumque nobis laboriosam voluptatem.
+      | Wir sind gerade dabei unsere Zelte abzubrechen und
+      | unsere Reise in unserem Wohnmobil zu planen.
+      | Währenddessen arbeiten wir Vollzeit und wohnen bereits in unserem Wohnmobil
+      | mit unserer Katze Winnie.
+      | Gerne könnt ihr uns bei unserer Vorbereitung und Reise begleiten.
     .font-montserrat
-      PrimaryButton(text="Call to action" path="/")
-      SecondaryButton(text="Secondary call to action" path="/")
+      PrimaryButton(text="Zu den Erlebnissen" path="/blog")
+      SecondaryButton(text="Unterstüze uns" path='https://www.etsy.com/de/shop/saltypotatostore' anotherPage="true")
   .flex.justify-around.mt-8(class='md:block md:mt-0 md:flex-1')
     .relative
       img.absolute.-top-16.-left-10(src='../../assets/Highlight1.svg' alt='')

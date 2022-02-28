@@ -5,35 +5,38 @@ section.bg-black.text-white.sectionSize
   .flex.flex-col(class='md:flex-row')
     .flex-1.mx-8.flex.flex-col.items-center.my-4
       .border-2.rounded-full.bg-secondary.text-black.h-12.w-12.flex.justify-center.items-center.mb-3
-        | 1
+        Caravan
       h3.font-montserrat.font-medium.text-xl.mb-2 Wohnmobil abbezahlen
       p.text-center.font-montserrat
-        | Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        | Wir sind dabei unser Wohnmobil abzubezahlen. Währenddessen leben wir bereits in diesem und
+        | investieren unsere gesparte Miete in unser fahrbahres Domizil.
     .flex-1.mx-8.flex.flex-col.items-center.my-4
       .border-2.rounded-full.bg-secondary.text-black.h-12.w-12.flex.justify-center.items-center.mb-3
-        | 2
+        Routes
       h3.font-montserrat.font-medium.text-xl.mb-2 Route planen
       p.text-center.font-montserrat
-        | Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        | Bis jetzt sieht es so aus, als ob wir ab September nach Frankreich, Spanien und Portugal fahren.
+        | Hauptsächlich wird es die Atlantikküste werden.
     .flex-1.mx-8.flex.flex-col.items-center.my-4
       .border-2.rounded-full.bg-secondary.text-black.h-12.w-12.flex.justify-center.items-center.mb-3
-        | 3
-      h3.font-montserrat.font-medium.text-xl.mb-2 Frei sein
+        Wave
+      h3.font-montserrat.font-medium.text-xl.mb-2 Surfen
       p.text-center.font-montserrat
-        | Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-
+        | Vor Corona haben wir während unseres Urlaubes Surfcamps besucht. Wurden dabei angefixt und wir wollen
+        | nichts anderes mehr machen.
   .font-montserrat.my-8
-    TertiaryButton(text="Verfolge unseren Werdegang" path="/")
+    TertiaryButton(text="Verfolge den Verlauf" path="/blog")
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import TertiaryButton from '@/components/buttons/TertiaryButton.vue'
+import { Wave, Caravan, Routes } from 'mdue'
 
 export default defineComponent({
   name: 'HowItWorks',
   components: {
-    TertiaryButton
+    Wave, Caravan, Routes, TertiaryButton
   }
 })
 </script>

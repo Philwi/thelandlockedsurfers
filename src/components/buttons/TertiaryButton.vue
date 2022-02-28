@@ -1,5 +1,5 @@
 <template lang="pug">
-nuxt-link.px-6.py-4.border-2.bg-secondary.border-secondary.text-black.border-solid.rounded-lg.cursor-pointer(:to="path" type="button")
+RouterLink.px-6.py-4.border-2.bg-secondary.border-secondary.text-black.border-solid.rounded-lg.cursor-pointer(:to="path" type="button")
   | {{ text }}
 </template>
 

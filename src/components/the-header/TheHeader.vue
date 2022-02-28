@@ -1,11 +1,15 @@
 <template lang="pug">
 nav.fixed.flex.justify-between.py-6.w-full.px-4.content-center.bg-secondary.z-10(class='lg:px-48 md:px-12')
   .flex.items-center
-    img.h-4(src='../../assets/Logo_black.svg' alt='Logo')
+    RouterLink(to="/")
+      img.h-4(src='../../assets/Logo_black.svg' alt='Logo')
   ul.font-montserrat.items-center.hidden(class='md:flex')
     template(v-for="link in navigationLinks")
       li.growing-underline.mx-3
-        a(:href='link.path') {{ link.text }}
+        template(v-if="link.target")
+          a(:href='link.path' :target="link.target") {{ link.text }}
+        template(v-else)
+          RouterLink(:to='link.path') {{ link.text }}
   // .font-montserrat.hidden(class='md:block')
     button.mr-6 Login
     button.py-2.px-4.text-white.bg-black.rounded-3xl
@@ -41,7 +45,8 @@ nav.fixed.flex.justify-between.py-6.w-full.px-4.content-center.bg-secondary.z-10
     },
     {
       text: 'Merch',
-      path: '/merch'
+      path: 'https://www.etsy.com/de/shop/saltypotatostore',
+      target: '_blank'
     },
   ]
 

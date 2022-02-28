@@ -1,57 +1,53 @@
 <template lang="pug">
 section.sectionSize.bg-secondary.py-0
   div
-    h2.secondaryTitle.bg-underline4.mb-0(class='bg-100%') Pricing
-  .flex.w-full.flex-col(class='md:flex-row')
-    .flex-1.flex.flex-col.mx-6.shadow-2xl.relative.bg-secondary.rounded-2xl.py-5.px-8.my-8(class='md:top-24')
-      h3.font-pt-serif.font-normal.text-2xl.mb-4
-        | The Good
-      .font-montserrat.font-bold.text-2xl.mb-4
-        | $25
-        span.font-normal.text-base  / month
-      .flex
-        img.mr-1(src='../../assets/logos/CheckedBox.svg' alt='')
-        p Benefit #1
-      .flex
-        img.mr-1(src='../../assets/logos/CheckedBox.svg' alt='')
-        p Benefit #2
-      .flex
-        img.mr-1(src='../../assets/logos/CheckedBox.svg' alt='')
-        p Benefit #3
-      button.border-2.border-solid.border-black.rounded-xl.text-lg.py-3.mt-4
-        | Choose plan
-    .flex-1.flex.flex-col.mx-6.shadow-2xl.relative.bg-secondary.rounded-2xl.py-5.px-8.my-8(class='md:top-12')
-      h3.font-pt-serif.font-normal.text-2xl.mb-4
-        | The Bad
-      .font-montserrat.font-bold.text-2xl.mb-4
-        | $40
-        span.font-normal.text-base  / month
-      .flex
-        img.mr-1(src='../../assets/logos/CheckedBox.svg' alt='')
-        p Benefit #1
-      .flex
-        img.mr-1(src='../../assets/logos/CheckedBox.svg' alt='')
-        p Benefit #2
-      .flex
-        img.mr-1(src='../../assets/logos/CheckedBox.svg' alt='')
-        p Benefit #3
-      button.border-2.border-solid.border-black.rounded-xl.text-lg.py-3.mt-4
-        | Choose plan
-    .flex-1.flex.flex-col.mx-6.shadow-2xl.relative.bg-secondary.rounded-2xl.py-5.px-8.my-8(class='md:top-24')
-      h3.font-pt-serif.font-normal.text-2xl.mb-4
-        | The Ugly
-      .font-montserrat.font-bold.text-2xl.mb-4
-        | $50
-        span.font-normal.text-base  / month
-      .flex
-        img.mr-1(src='../../assets/logos/CheckedBox.svg' alt='')
-        p Benefit #1
-      .flex
-        img.mr-1(src='../../assets/logos/CheckedBox.svg' alt='')
-        p Benefit #2
-      .flex
-        img.mr-1(src='../../assets/logos/CheckedBox.svg' alt='')
-        p Benefit #3
-      button.border-2.border-solid.border-black.rounded-xl.text-lg.py-3.mt-4
-        | Choose plan
+    h2.secondaryTitle.bg-underline4.mb-0(class='bg-100%') Merch
+  .flex.w-full.flex-col(class='xl:flex-row')
+    template(v-for="element in cardElements")
+      Card(
+        :headline='element.headline'
+        :imageSrc="element.imageSrc"
+        :price="element.price"
+        :topAlignment="element.topAlignment"
+        :url="element.url"
+      )
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+import Card from '@/components/sections/pricing/Card.vue'
+
+export default defineComponent({
+  data() {
+    return {
+      cardElements: [
+        {
+          headline: 'Medusa T-Shirt',
+          price: 27,
+          imageSrc: 'medusa.jpg',
+          topAlignment: '24',
+          url: 'https://www.etsy.com/listing/953814049/medusa-t-shirt-bright'
+        },
+        {
+          headline: 'Sushi T-Shirt',
+          price: 27,
+          imageSrc: 'sushi.avif',
+          topAlignment: '12',
+          url: 'https://www.etsy.com/listing/953818271/sushi-t-shirt'
+        },
+        {
+          headline: 'Ice T-Shirt',
+          price: 25,
+          imageSrc: 'ice.avif',
+          topAlignment: '24',
+          url: 'https://www.etsy.com/listing/939847482/ice-back-t-shirt'
+        }
+      ]
+    }
+  },
+  components: {
+    Card
+  }
+})
+</script>
+
