@@ -7,7 +7,8 @@ import BlogPost from '@/pages/BlogPost.vue'
 const routes = [
   { path: '/', component: Index },
   { path: '/blog', component: Blog },
-  { path: '/blog/:id', component: BlogPost }
+  { path: '/blog/:id', component: BlogPost },
+  { path: '/:pathMatch(.*)', component: Index }
 ]
 
 export const router = createRouter({
