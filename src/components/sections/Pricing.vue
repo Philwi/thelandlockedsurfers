@@ -16,6 +16,9 @@ section.sectionSize.bg-secondary.py-0
 <script lang="ts">
 import { defineComponent } from 'vue'
 import Card from '@/components/sections/pricing/Card.vue'
+import Medusa from '@/assets/salty-potato/medusa.jpg'
+import Sushi from '@/assets/salty-potato/sushi.avif'
+import Ice from '@/assets/salty-potato/ice.avif'
 
 export default defineComponent({
   data() {
@@ -24,21 +27,21 @@ export default defineComponent({
         {
           headline: 'Medusa T-Shirt',
           price: 27,
-          imageSrc: 'medusa.jpg',
+          imageSrc: Medusa,
           topAlignment: '24',
           url: 'https://www.etsy.com/listing/953814049/medusa-t-shirt-bright'
         },
         {
           headline: 'Sushi T-Shirt',
           price: 27,
-          imageSrc: 'sushi.avif',
+          imageSrc: Sushi,
           topAlignment: '12',
           url: 'https://www.etsy.com/listing/953818271/sushi-t-shirt'
         },
         {
           headline: 'Ice T-Shirt',
           price: 25,
-          imageSrc: 'ice.avif',
+          imageSrc: Ice,
           topAlignment: '24',
           url: 'https://www.etsy.com/listing/939847482/ice-back-t-shirt'
         }
