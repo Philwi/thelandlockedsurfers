@@ -1,13 +1,22 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
+  important: true,
   theme: {
     colors: {
       secondary: "#F4F2ED",
       black: "black",
       white: "white",
+      yellow: colors.yellow,
+      green: colors.green,
+      red: colors.red,
+      purple: colors.purple,
+      blue: colors.blue,
+      gray: colors.gray,
     },
     fontFamily: {
       "pt-serif": ["PT Serif", "serif"],

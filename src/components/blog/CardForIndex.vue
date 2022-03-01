@@ -1,0 +1,33 @@
+<template lang="pug">
+.w-full.p-6.flex.flex-col.flex-grow.flex-shrink(:class='responsiveClass')
+  .flex-1.bg-white.rounded-t.rounded-b-none.overflow-hidden.shadow-lg
+    RouterLink.flex.flex-wrap.no-underline(:to='blogPath' class='hover:no-underline')
+      img.h-64.w-full.rounded-t.object-cover(:src='previewImageUrl')
+      .px-6
+      .w-full.font-bold.text-xl.text-gray-900.px-6 {{ headline }}
+      p.text-gray-800.font-serif.text-base.px-6.mb-5
+        | {{ firstParagraph }}
+  .flex-none.mt-auto.bg-white.rounded-b.rounded-t-none.overflow-hidden.shadow-lg.p-6
+    .flex.items-center.justify-between
+      img.w-8.h-8.rounded-full.mr-4.avatar(:data-tippy-content='authorName' :src='authorImageUrl' alt='Avatar of Author')
+      .space-y-2
+        template(v-for="tag in tags")
+          Tag(:tag="tag")
+      p.text-gray-600.text-xs(class='md:text-sm') {{ readingTime }} Minuten Lesedauer
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { BlogEntryPropMixin } from '@/mixins'
+
+export default defineComponent({
+  mixins: [BlogEntryPropMixin],
+  props: {
+    responsiveClass: {
+      type: String,
+      default: 'md:w-1/3'
+    }
+  }
+})
+</script>
+
