@@ -22,7 +22,7 @@ nav.fixed.flex.justify-between.py-6.w-full.px-4.content-center.bg-secondary.z-10
   ul.font-montserrat.flex.flex-col.mx-8.my-24.items-center.text-3xl
     template(v-for="link in navigationLinks")
       li.my-6
-        a(:href='link.path') {{ link.text }}
+        RouterLink(:to='link.path' @click="toggleMenu") {{ link.text }}
 </template>
 
 <script setup lang="ts">

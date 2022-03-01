@@ -7,7 +7,7 @@
       .w-full.flex.flex-col.flex-grow.flex-shrink(class='md:w-1/3')
         .flex-1.bg-white.rounded-t.rounded-b-none.overflow-hidden.shadow-lg
           p.w-full.text-gray-600.text-xs.pt-6.px-6(class='md:text-sm') GRÜßT EUCH
-          .w-full.font-bold.text-xl.text-gray-900.px-6 {{ headline }}
+          .w-full.font-bold.text-xl.text-gray-900.px-6.font-pt-serif {{ headline }}
           p.text-gray-800.font-serif.text-base.px-6.mb-5
             | {{ firstParagraph }}
 

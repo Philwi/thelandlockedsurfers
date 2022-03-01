@@ -1,5 +1,5 @@
 <template lang="pug">
-h1.text-2xl.mb-5.py-6.font-bold(class='md:text-3xl') {{ text }}
+h1.text-2xl.mb-5.py-6.font-bold.font-pt-serif(class='md:text-3xl') {{ text }}
 </template>
 
 <script lang="ts">

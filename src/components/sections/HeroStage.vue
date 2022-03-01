@@ -1,10 +1,10 @@
 <template lang="pug">
 section.pt-24.flex.flex-col.justify-center.text-center.px-4.bg-secondary(class='md:mt-0 md:h-screen md:text-left md:flex-row md:justify-between md:items-center lg:px-48 md:px-12')
   div(class='md:flex-1 md:mr-10')
-    h1.font-pt-serif.text-5xl.font-bold.mb-7
-      | The Landlocked&nbsp
+    h1.font-pt-serif.text-5xl.font-bold.mb-7.flex-wrap
+      | The Landlocked
       span.bg-underline1.bg-left-bottom.bg-no-repeat.pb-2(class='bg-100%')
-        | Surfers
+        |  Surfers
     p.font-pt-serif.font-normal.mb-7
       | Wir sind gerade dabei unsere Zelte abzubrechen und
       | unsere Reise in unserem Wohnmobil zu planen.

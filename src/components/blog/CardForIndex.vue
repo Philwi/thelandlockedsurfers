@@ -4,7 +4,7 @@
     RouterLink.flex.flex-wrap.no-underline(:to='blogPath' class='hover:no-underline')
       img.h-64.w-full.rounded-t.object-cover(:src='previewImageUrl')
       p.w-full.text-gray-600.text-xs.pt-6.px-6(class='md:text-sm') Neues von uns Dreien
-      .w-full.font-bold.text-xl.text-gray-900.px-6 {{ headline }}
+      .w-full.font-bold.text-xl.text-gray-900.px-6.font-pt-serif {{ headline }}
       p.text-gray-800.font-serif.text-base.px-6.mb-5
         | {{ firstParagraph }}
   .flex-none.mt-auto.bg-white.rounded-b.rounded-t-none.overflow-hidden.shadow-lg.p-6
