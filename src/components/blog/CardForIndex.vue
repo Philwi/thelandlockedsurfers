@@ -3,7 +3,7 @@
   .flex-1.bg-white.rounded-t.rounded-b-none.overflow-hidden.shadow-lg
     RouterLink.flex.flex-wrap.no-underline(:to='blogPath' class='hover:no-underline')
       img.h-64.w-full.rounded-t.object-cover(:src='previewImageUrl')
-      .px-6
+      p.w-full.text-gray-600.text-xs.pt-6.px-6(class='md:text-sm') Neues von uns Dreien
       .w-full.font-bold.text-xl.text-gray-900.px-6 {{ headline }}
       p.text-gray-800.font-serif.text-base.px-6.mb-5
         | {{ firstParagraph }}
@@ -19,9 +19,10 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { BlogEntryPropMixin } from '@/mixins'
+import { BlogEntryComputedMixin } from '@/mixins'
 
 export default defineComponent({
-  mixins: [BlogEntryPropMixin],
+  mixins: [BlogEntryComputedMixin, BlogEntryPropMixin],
   props: {
     responsiveClass: {
       type: String,

@@ -25,9 +25,10 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { BlogEntryPropMixin } from '@/mixins'
+import { BlogEntryComputedMixin } from '@/mixins'
 
 export default defineComponent({
-  mixins: [BlogEntryPropMixin],
+  mixins: [BlogEntryComputedMixin, BlogEntryPropMixin]
 })
 </script>
 

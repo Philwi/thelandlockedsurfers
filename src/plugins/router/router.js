@@ -2,10 +2,12 @@ import { createRouter, createWebHistory } from 'vue-router'
 import { blogStore } from '@/plugins/store'
 import Index from '@/pages/Index.vue'
 import Blog from '@/pages/Blog.vue'
+import BlogPost from '@/pages/BlogPost.vue'
 
 const routes = [
   { path: '/', component: Index },
-  { path: '/blog', component: Blog }
+  { path: '/blog', component: Blog },
+  { path: '/blog/:id', component: BlogPost }
 ]
 
 export const router = createRouter({

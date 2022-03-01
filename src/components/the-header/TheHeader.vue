@@ -35,14 +35,14 @@ nav.fixed.flex.justify-between.py-6.w-full.px-4.content-center.bg-secondary.z-10
       text: 'Blog',
       path: '/blog'
     },
-    {
-      text: 'Fitness',
-      path: '/fitness'
-    },
-    {
-      text: 'Ernährung',
-      path: '/ernaehrung'
-    },
+    // {
+    //   text: 'Fitness',
+    //   path: '/fitness'
+    // },
+    // {
+    //   text: 'Ernährung',
+    //   path: '/ernaehrung'
+    // },
     {
       text: 'Merch',
       path: 'https://www.etsy.com/de/shop/saltypotatostore',
