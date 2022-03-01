@@ -1,5 +1,5 @@
 <template lang="pug">
-section.sectionSize.bg-secondary.py-0
+section.sectionSize.bg-secondary.py-12
   div
     h2.secondaryTitle.bg-underline4.mb-0(class='bg-100%') Merch
   .flex.w-full.flex-col(class='xl:flex-row')

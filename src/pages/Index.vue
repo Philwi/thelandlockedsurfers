@@ -2,6 +2,7 @@
 HeroStage
 HowItWorks
 Features
+WaveBlog
 Pricing
 FAQ
 </template>
@@ -13,10 +14,11 @@ import Features from '@/components/sections/Features.vue'
 import HeroStage from '@/components/sections/HeroStage.vue'
 import HowItWorks from '@/components/sections/HowItWorks.vue'
 import Pricing from '@/components/sections/Pricing.vue'
+import WaveBlog from '@/components/sections/WaveBlog.vue'
 
 export default defineComponent({
   components: {
-    FAQ, Features, HeroStage, HowItWorks, Pricing
+    FAQ, Features, HeroStage, HowItWorks, Pricing, WaveBlog
   }
 })
 </script>
