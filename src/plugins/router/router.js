@@ -4,12 +4,16 @@ import AboutUs from '@/pages/AboutUs.vue'
 import Blog from '@/pages/Blog.vue'
 import BlogPost from '@/pages/BlogPost.vue'
 import Index from '@/pages/Index.vue'
+import Philipp from '@/pages/about-us/Philipp.vue'
+import Lena from '@/pages/about-us/Lena.vue'
 
 const routes = [
   { path: '/', component: Index },
   { path: '/blog', component: Blog },
   { path: '/blog/:id', component: BlogPost },
   { path: '/ueber-uns', component: AboutUs },
+  { path: '/ueber-uns/philipp', component: Philipp },
+  { path: '/ueber-uns/lena', component: Lena },
   { path: '/:pathMatch(.*)', component: Index }
 ]
 
