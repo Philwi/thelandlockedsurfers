@@ -1,13 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { blogStore } from '@/plugins/store'
-import Index from '@/pages/Index.vue'
+import AboutUs from '@/pages/AboutUs.vue'
 import Blog from '@/pages/Blog.vue'
 import BlogPost from '@/pages/BlogPost.vue'
+import Index from '@/pages/Index.vue'
 
 const routes = [
   { path: '/', component: Index },
   { path: '/blog', component: Blog },
   { path: '/blog/:id', component: BlogPost },
+  { path: '/ueber-uns', component: AboutUs },
   { path: '/:pathMatch(.*)', component: Index }
 ]
 

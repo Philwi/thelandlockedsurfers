@@ -1,7 +1,7 @@
 <template lang="pug">
 section.bg-black.sectionSize
   .mb-4
-    img.h-4(src='../../assets/Logo_white.svg' alt='Logo')
+    img.h-12(src='../../assets/Logo_white.png' alt='Logo')
   .flex.mb-8
     a(href='www.facebook.com/the_landlocked_surfers' target="_blank")
       img.mx-4(src='../../assets/logos/Facebook.svg' alt='Facebook logo')
