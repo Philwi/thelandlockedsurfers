@@ -3,7 +3,7 @@
   .flex.h-full.bg-white.rounded.overflow-hidden.shadow-lg
     RouterLink.flex.flex-wrap.no-underline(:to='blogPath' class='hover:no-underline')
       .w-full.rounded-t(class='md:w-2/3')
-        img.h-full.w-full.shadow.object-cover(:src='previewImageUrl')
+        VLazyImage.h-full.w-full.shadow.object-cover(:src='previewImageUrl')
       .w-full.flex.flex-col.flex-grow.flex-shrink(class='md:w-1/3')
         .flex-1.bg-white.rounded-t.rounded-b-none.overflow-hidden.shadow-lg
           p.w-full.text-gray-600.text-xs.pt-6.px-6(class='md:text-sm') GRÜßT EUCH
@@ -26,9 +26,12 @@
 import { defineComponent } from 'vue'
 import { BlogEntryPropMixin } from '@/mixins'
 import { BlogEntryComputedMixin } from '@/mixins'
+import VLazyImage from "v-lazy-image"
+
 
 export default defineComponent({
-  mixins: [BlogEntryComputedMixin, BlogEntryPropMixin]
+  mixins: [BlogEntryComputedMixin, BlogEntryPropMixin],
+  components: { VLazyImage }
 })
 </script>
 
