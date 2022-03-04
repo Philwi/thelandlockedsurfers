@@ -10,6 +10,8 @@
     "cypress:open": "cypress open"
   },
   "dependencies": {
+    "@sentry/tracing": "^6.18.1",
+    "@sentry/vue": "^6.18.1",
     "contentful": "^9.1.12",
     "pinia": "^2.0.11",
     "v-lazy-image": "^2.1.1",
