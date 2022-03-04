@@ -10,8 +10,7 @@ export let BlogEntryComputedMixin = {
       return this.blogEntry.sys.id
     },
     blogPath() {
-      // TODO: noch richtig aus dem Router holen
-      return `/blog/${this.blogId}`
+      return `/blog/${this.slugyfiedHeadline}?id=${this.blogId}`
     },
     createdAt() {
       return new Date(this.blogEntry.fields.createdAt).toLocaleString('de-DE')
@@ -35,6 +34,20 @@ export let BlogEntryComputedMixin = {
     },
     blogEntryTextElements() {
       return this.blogEntry.fields.text.content
+    },
+    slugyfiedHeadline() {
+      return this.stringToSlug(this.headline)
+    }
+  },
+  methods: {
+    stringToSlug(string) {
+      string = string.replace(/^\s+|\s+$/g, ''); // trim
+      string = string.toLowerCase();
+      string = string.replace(/[^a-z0-9 -]/g, '') // remove invalid chars
+        .replace(/\s+/g, '-') // collapse whitespace and replace by -
+        .replace(/-+/g, '-'); // collapse dashes
+      console.log(string)
+      return string;
     }
   }
 }

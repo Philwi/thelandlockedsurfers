@@ -28,7 +28,7 @@ export default defineComponent({
   },
   computed: {
     idFromRoute() {
-      return this.route.params.id
+      return this.route.query?.id
     },
     blogEntry() {
       const blogEntryFromId = this.store.getBlogEntries.find(entry => entry.sys.id === this.idFromRoute)
