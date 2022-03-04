@@ -9,9 +9,9 @@ import Lena from '@/pages/about-us/Lena.vue'
 
 const routes = [
   { path: '/', component: Index },
-  { path: '/blog', component: Blog },
-  { path: '/blog/:id', component: BlogPost },
-  { path: '/ueber-uns', component: AboutUs },
+  { path: '/blog', component: Blog, meta: { title: 'Blog Übersicht' } },
+  { path: '/blog/:id', component: BlogPost, meta: { title: 'Blog Post' } },
+  { path: '/ueber-uns', component: AboutUs, meta: { title: 'Über uns' } },
   { path: '/ueber-uns/philipp', component: Philipp },
   { path: '/ueber-uns/lena', component: Lena },
   { path: '/:pathMatch(.*)', component: Index }
