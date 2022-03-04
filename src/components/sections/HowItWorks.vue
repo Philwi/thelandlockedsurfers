@@ -8,7 +8,7 @@ section.bg-black.text-white.sectionSize
         Caravan
       h3.font-montserrat.font-medium.text-xl.mb-2 Mietfrei leben
       p.text-center.font-montserrat
-        | Home is where you park it. Raus aus der Wohnung und rein in die Freiheit!
+        | Home is where you park it. Raus aus der Wohnung und rein in die Freiheit! Im Einklang mit der Natur.
     .flex-1.mx-8.flex.flex-col.items-center.my-4
       .border-2.rounded-full.bg-secondary.text-black.h-12.w-12.flex.justify-center.items-center.mb-3
         Wave

@@ -26,12 +26,12 @@ export default defineComponent({
         {
           icon: 'WeightLifter',
           headline: 'Surf-Fitness',
-          text: 'Fitness ist uns wichtig und deswegen halten wir uns das ganze Jahr fit. In den kommenden Wochen und Monaten werden ganz bewusst für das Surfen trainieren. In unseren Blog-Posts kannst du sehen, wie unser Programm aussieht.'
+          text: 'Fitness ist uns wichtig und deswegen halten wir uns das ganze Jahr fit. In den kommenden Wochen und Monaten werden wir ganz bewusst für das Surfen trainieren. In unseren Blog-Posts kannst du sehen, wie unser Programm aussieht.'
         },
         {
           icon: 'Laptop',
           headline: 'Digital-Nomades',
-          text: 'Mit den Zehen im Sand und den Fingern auf den Tasten. Dem Kopf im Schatten unserer Markise, die Wellen betrachten. Mit Software-Entwicklung und Grafikdesign verdienen wir unser veganes Butterbrot.'
+          text: 'Mit den Zehen im Sand und den Fingern auf den Tasten. Den Kopf im Schatten unserer Markise, die Wellen betrachten. Mit Software-Entwicklung und Grafikdesign verdienen wir unser veganes Butterbrot.'
         },
         {
           icon: 'Cat',
