@@ -66,3 +66,8 @@ const toggleMenu = function(): void {
 }
   </script>
 
+<style scoped>
+nav {
+  width: 100vw !important;
+}
+</style>

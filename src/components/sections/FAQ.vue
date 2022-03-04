@@ -9,7 +9,7 @@ section.sectionSize.items-start.pt-8.bg-black.text-white(class='md:pt-36')
         | Wie kann ich euch erreichen?
       img.transform.transition-transform(src='../../assets/logos/CaretRight.svg' alt='')
     .font-montserrat.text-sm.font-extralight.pb-8.hidden(ref="contact")
-      | Einfach per Mail(thelandlockedsurfers@gmail.com) oder Socialmedia. :)
+      | Einfach per Mail (thelandlockedsurfers@gmail.com) oder Socialmedia. :)
   hr.w-full.bg-white
   .w-full.py-4.cursor-pointer(@click="toggleSubElement('shop')")
     .flex.justify-between.items-center
