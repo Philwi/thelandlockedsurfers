@@ -8,7 +8,7 @@ section.sectionSize.bg-secondary
         :headline="textWithIconElement.headline"
         :text="textWithIconElement.text",
       )
-        component.mr-4.icon-text(:is="textWithIconElement.icon")
+        component.mr-4.icon-text.h-24.w-24(:is="textWithIconElement.icon")
 </template>
 
 <script lang="ts">
@@ -25,25 +25,23 @@ export default defineComponent({
       textWithIconElements: [
         {
           icon: 'WeightLifter',
-          headline: 'Surf-Fit werden',
-          text: 'Wir wollen uns sportlich auf ein geeignetes Level befinden. Dafür gehen wir mehrfach die Woche ins Fitness-Studio. In unseren Blogposts erfährst du mehr über geeignete Übungen.'
-
+          headline: 'Surf-Fitness',
+          text: 'Fitness ist uns wichtig und deswegen halten wir uns das ganze Jahr fit. In den kommenden Wochen und Monaten werden ganz bewusst für das Surfen trainieren. In unseren Blog-Posts kannst du sehen, wie unser Programm aussieht.'
         },
         {
           icon: 'Laptop',
-          headline: 'Digital-Nomaden Lifestyle',
-          text: 'Wir können es uns nicht leisten einfach mit der Arbeit aufzuhören. Wir haben weder reiche Eltern, noch werden wir einmal viel Erben. Deswegen müssen wir uns damit beschäftigen, wie wir während der Reise auch noch Geld verdienen.'
-
+          headline: 'Digital-Nomades',
+          text: 'Mit den Zehen im Sand und den Fingern auf den Tasten. Dem Kopf im Schatten unserer Markise, die Wellen betrachten. Mit Software-Entwicklung und Grafikdesign verdienen wir unser veganes Butterbrot.'
         },
         {
           icon: 'Cat',
-          headline: 'Winnie',
-          text: 'Wir reisen nicht nur zu zweit, wir haben auch unsere Katze Winnie mit dabei. Wir müssen noch für die notwendigen Impfungen sorgen. Das Caravan Leben stört Sie zum Glück kaum.'
+          headline: '#Winniethetravelcat',
+          text: 'Winnie ist überall mit dabei. Unsere kleine Vierbeinerin ist eine Glückskatze! Sie ist eine gute Beifahrerin und liebt es auch durch Wälder und Dünen zu laufen. Das Leben auf Rädern ist für sie wahnsinnig aufregend!'
         },
         {
           icon: 'Caravan',
-          headline: 'Wohnmobil fit bekommen',
-          text: 'Für die Reise wollen wir unser Wohnmobil noch einmal gründlich durchchecken, damit uns nicht unterwegs böse Überraschungen treffen. Wir haben leider nicht so viel Ahnung von Autos und müssen so auf Hilfe von Anderen hoffen.'
+          headline: 'Autarkes Vanlife',
+          text: 'Wir wohnen zu dritt auf 10m² und 6 Rädern in einem 18 Jahre alten Wohnmobil. Mit diesem können wir fast autark leben. Mit "Gas, Wasser, Scheiße" kennen wir uns mittlerweile gut aus. Wo bekommen wir Wasser her? Wo kann man die Toilette entleeren? Wo kann man gut parken? Die Antworten darauf findet ihr in unserem Blog.'
 
         }
       ]

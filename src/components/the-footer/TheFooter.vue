@@ -3,14 +3,14 @@ section.bg-black.sectionSize
   .mb-4
     img.h-12(src='../../assets/Logo_white.png' alt='Logo')
   .flex.mb-8
-    a(href='www.facebook.com/the_landlocked_surfers' target="_blank")
-      img.mx-4(src='../../assets/logos/Facebook.svg' alt='Facebook logo')
-    a(href='www.youtube.com/the_landlocked_surfers' target="_blank")
-      img.mx-4(src='../../assets/logos/Youtube.svg' alt='Youtube logo')
-    a(href='www.instagram.com/the_landlocked_surfers' target="_blank")
+    //a(href='www.facebook.com/the_landlocked_surfers' target="_blank")
+    //  img.mx-4(src='../../assets/logos/Facebook.svg' alt='Facebook logo')
+    //a(href='www.youtube.com/the_landlocked_surfers' target="_blank")
+    //  img.mx-4(src='../../assets/logos/Youtube.svg' alt='Youtube logo')
+    a(href='https://www.instagram.com/memoriesofmad' target="_blank")
       img.mx-4(src='../../assets/logos/Instagram.svg' alt='Instagram logo')
-    a(href='www.twitter.com/the_landlocked_surfers' target="_blank")
-      img.mx-4(src='../../assets/logos/Twitter.svg' alt='Twitter logo')
+    // a(href='www.twitter.com/the_landlocked_surfers' target="_blank")
+    //   img.mx-4(src='../../assets/logos/Twitter.svg' alt='Twitter logo')
   .text-white.font-montserrat.text-sm
     | &copy; {{ currentYear }} The Landlocked Surfers. All rights reserved
 </template>

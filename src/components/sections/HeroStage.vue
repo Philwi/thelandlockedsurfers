@@ -6,11 +6,10 @@ section.pt-24.flex.flex-col.justify-center.text-center.px-4.bg-secondary(class='
       span.bg-underline1.bg-left-bottom.bg-no-repeat.pb-2(class='bg-100%')
         |  Surfers
     p.font-pt-serif.font-normal.mb-7
-      | Wir sind gerade dabei unsere Zelte abzubrechen und
-      | unsere Reise in unserem Wohnmobil zu planen.
-      | Währenddessen arbeiten wir Vollzeit und wohnen bereits in unserem Wohnmobil
-      | mit unserer Katze Winnie.
-      | Gerne könnt ihr uns bei unserer Vorbereitung und Reise begleiten.
+      | Wir sind hissen unsere Segel!
+      | Und planen eine Reise in unserem Wohnmobil.
+      | Mit unserer Katze Winnie wohen wir seit einem Jahr mobil in und um Dresden.
+      | Doch jetzt soll alles anders werden! Wir wollen in den Süden. Seid mit dabei!
     .font-montserrat
       PrimaryButton(text="Zu den Erlebnissen" path="/blog")
       SecondaryButton(text="Unterstüze uns" path='https://www.etsy.com/de/shop/saltypotatostore' anotherPage="true")
