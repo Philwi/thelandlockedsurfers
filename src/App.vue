@@ -10,4 +10,7 @@ import TheFooter from '@/components/the-footer/TheFooter.vue'
 </script>
 
 <style>
+html, body {
+  overflow-x: hidden;
+}
 </style>
