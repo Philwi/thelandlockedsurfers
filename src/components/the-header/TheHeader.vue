@@ -2,7 +2,7 @@
 nav.fixed.flex.justify-between.py-6.w-full.px-4.content-center.bg-secondary.z-10(class='lg:px-48 md:px-12')
   .flex.items-center
     RouterLink(to="/")
-      img.h-8(src='../../assets/Logo_black.png' alt='Logo')
+      img.h-8(src='../../assets/Logo_black.webp' alt='Logo')
   ul.font-montserrat.items-center.hidden(class='md:flex')
     template(v-for="link in navigationLinks")
       li.growing-underline.mx-3

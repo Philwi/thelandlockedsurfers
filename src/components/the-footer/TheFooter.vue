@@ -1,7 +1,7 @@
 <template lang="pug">
 section.bg-black.sectionSize
   .mb-4
-    img.h-12(src='../../assets/Logo_white.png' alt='Logo')
+    img.h-12(src='../../assets/Logo_white.webp' alt='Logo')
   .flex.mb-8.text-white.text-xl
     a(href='mailto:thelandlockedsurfers@gmail.com')
       Gmail.mx-2

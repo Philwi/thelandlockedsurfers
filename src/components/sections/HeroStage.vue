@@ -16,7 +16,7 @@ section.pt-24.flex.flex-col.justify-center.text-center.px-4.bg-secondary(class='
   .flex.justify-around.mt-8(class='md:block md:mt-0 md:flex-1')
     .relative
       img.absolute.-top-16.-left-10(src='../../assets/Highlight1.svg' alt='')
-    img.rounded-lg(src='@/assets/womo-zeichnung-color.png' alt='Surfer Store' class="md:rounded-8xl")
+    img.rounded-lg(src='@/assets/womo-zeichnung-color.webp' alt='Surfer Store' class="md:rounded-8xl")
     .relative
       img.absolute.-bottom-10.-right-6(src='../../assets/Highlight2.svg' alt='')
 </template>
