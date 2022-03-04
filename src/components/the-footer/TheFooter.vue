@@ -2,23 +2,23 @@
 section.bg-black.sectionSize
   .mb-4
     img.h-12(src='../../assets/Logo_white.png' alt='Logo')
-  .flex.mb-8
-    //a(href='www.facebook.com/the_landlocked_surfers' target="_blank")
-    //  img.mx-4(src='../../assets/logos/Facebook.svg' alt='Facebook logo')
-    //a(href='www.youtube.com/the_landlocked_surfers' target="_blank")
-    //  img.mx-4(src='../../assets/logos/Youtube.svg' alt='Youtube logo')
+  .flex.mb-8.text-white.text-xl
+    a(href='mailto:thelandlockedsurfers@gmail.com')
+      Gmail.mx-2
     a(href='https://www.instagram.com/memoriesofmad' target="_blank")
-      img.mx-4(src='../../assets/logos/Instagram.svg' alt='Instagram logo')
-    // a(href='www.twitter.com/the_landlocked_surfers' target="_blank")
-    //   img.mx-4(src='../../assets/logos/Twitter.svg' alt='Twitter logo')
+      Instagram.mx-2
   .text-white.font-montserrat.text-sm
     | &copy; {{ currentYear }} The Landlocked Surfers. All rights reserved
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { Gmail, Instagram } from 'mdue'
 
 export default defineComponent({
+  components: {
+    Gmail, Instagram
+  },
   computed: {
     currentYear() {
       return new Date().getFullYear()
