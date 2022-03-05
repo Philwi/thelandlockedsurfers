@@ -52,7 +52,9 @@ module.exports = {
         "fade-in-down": "fade-in-down 0.5s ease-out",
       },
       transitionProperty: {
-        'height': 'height'
+        'height': 'height',
+        'rotate': 'rotate',
+        'underline': 'underline'
       }
     },
   },

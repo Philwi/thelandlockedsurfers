@@ -2,27 +2,34 @@
 TheHeader
 RouterView
 TheFooter
-</template>>
+SocialSharing
+</template>
 
 <script lang="ts">
 import { blogStore } from '@/plugins/store'
+import { rootStore } from '@/plugins/store'
 import { defineComponent } from 'vue'
+import SocialSharing from '@/components/social-sharing/SocialSharing.vue'
 import TheHeader from '@/components/the-header/TheHeader.vue'
 import TheFooter from '@/components/the-footer/TheFooter.vue'
 
 export default defineComponent({
   setup() {
     const store = blogStore()
-    return { store }
+    const currentPageStore = rootStore()
+    return { currentPageStore, store }
   },
   components: {
-    TheHeader, TheFooter
+    TheHeader, TheFooter, SocialSharing
   },
   watch: {
     $route: {
       immediate: true,
-      handler(to, from) {
-        document.title = this.buildTitle(to)
+      handler(to, _from) {
+        console.log(to)
+        const title = this.buildTitle(to)
+        document.title = title
+        this.setCurrentPageToStore(title, to.path)
       }
     }
   },
@@ -42,8 +49,18 @@ export default defineComponent({
     getBlogEntryTitle(id: string): string {
       const blogEntry = this.store.getBlogEntries.find(entry => entry.sys.id === id)
       return blogEntry?.fields?.headline
+    },
+    setCurrentPageToStore(title: string, path: string) {
+      const url = `https://www.thelandlockedsurfers.com${path}`
+
+      const currentPage = {
+        url: url,
+        title: 'The Landlocked Surfers',
+        description: title
+      }
+      this.currentPageStore.setCurrentPage(currentPage)
     }
-  },
+  }
 })
 </script>
 
