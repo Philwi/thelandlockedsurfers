@@ -1,11 +1,27 @@
-# Vue 3 + Typescript + Vite
+# The Landlocked Surfers
 
-This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+is now a simple static website built with Vue.Js and Tailwind.
+The purpose of this project is to share our experiences during our travels.
+Feel free to check the code or add some issues if you want a feature to be build. :)
 
-## Recommended IDE Setup
+## Development
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+```
+yarn install
+yarn dev
+```
 
-## Type Support For `.vue` Imports in TS
+Through Vite there is an almost instant hot reloading for any updates made.
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's `.vue` type support plugin by running `Volar: Switch TS Plugin on/off` from VSCode command palette.
+## Deployment
+
+Netlify is offering free hosting for static websites. We use netlify lambda functions to hide the API-Credentiels of Contentful
+
+## CMS
+
+We use Contentful-Headless CMS to get some dynamic content. So my girlfriend can easily add blog posts as well.
+
+## About Me
+
+I am mostly a backend developer trained in ruby on rails. In side projects I like to get to know some other tech stack.
+It's been a blast for now.
