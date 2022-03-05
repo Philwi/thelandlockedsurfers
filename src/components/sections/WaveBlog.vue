@@ -24,7 +24,6 @@ export default defineComponent({
   computed: {
     lastBlogEntries() {
       const blogEntriesCount = this.store.getBlogEntries.length
-      console.log(blogEntriesCount)
       return this.store.getBlogEntries.slice(blogEntriesCount - 3, blogEntriesCount)
     }
   },
