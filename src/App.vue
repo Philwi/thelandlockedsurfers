@@ -29,7 +29,7 @@ export default defineComponent({
         console.log(to)
         const title = this.buildTitle(to)
         document.title = title
-        this.setCurrentPageToStore(title, to.path)
+        this.setCurrentPageToStore(title, to.fullPath)
       }
     }
   },

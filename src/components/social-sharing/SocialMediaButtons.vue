@@ -8,6 +8,7 @@
       :url="sharing.url"
       :title="sharing.title"
       :description="sharing.description"
+      :media="WomoImage"
     )
       component(:is="network.name" :style="styleFromColor(network.color)").h-12.w-12
 </template>
@@ -16,6 +17,7 @@
 import { defineComponent } from 'vue'
 import { rootStore } from '@/plugins/store'
 import { Email, Facebook,  Pinterest, Quora, Reddit, Telegram, Twitter, Whatsapp, Xing  } from 'mdue'
+import WomoImage from '@/assets/womo-zeichnung-color.png'
 
 export default defineComponent({
   setup() {
