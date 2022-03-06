@@ -3,7 +3,7 @@ template(v-for="element in textElements")
   template(v-if="element.elementType == 'paragraph' && !!element.text")
     p.pb-12 {{ element.text }}
   template(v-if="element.elementType == 'hyperlink'")
-    a.pb-12.underline.cursor-pointer.block.text-center(:href="element.href" target="_blank") {{ element.text }}
+    a.pb-12.underline.cursor-pointer.block.text-center(:href="element.href" target="_blank" rel="nofollow") {{ element.text }}
 </template>
 
 <script lang="ts">

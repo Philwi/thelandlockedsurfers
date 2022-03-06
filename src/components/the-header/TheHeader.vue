@@ -23,7 +23,7 @@ nav.fixed.flex.justify-between.py-6.w-full.px-4.content-center.bg-secondary.z-10
     template(v-for="link in navigationLinks")
       li.my-6
         template(v-if="link.text == 'Merch'")
-          a(:href="link.path" @click="toggleMenu" target="_blank") {{ link.text }}
+          a(:href="link.path" @click="toggleMenu" target="_blank" rel="nofollow") {{ link.text }}
         template(v-else)
           RouterLink(:to='link.path' @click="toggleMenu") {{ link.text }}
 </template>

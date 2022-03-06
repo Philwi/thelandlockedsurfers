@@ -17,9 +17,9 @@ section.bg-black.text-white.sectionSize
         | Surfen haben wir in tollen Surfcamps in Portugal und Marokko kennengelernt.
         | Seitdem planen wir voller Vorfreude das nächste Surferlebnis.
         | Schaut doch mal bei
-        a.font-bold(href="https://www.wavysurfcamp.com/de/" target="_blank") &ensp;Wavy Surfcamp
+        a.font-bold(href="https://www.wavysurfcamp.com/de/" target="_blank" rel="nofollow") &ensp;Wavy Surfcamp
         | &ensp;und&ensp;
-        a.font-bold(href="https://adventurekeys.com/" target="_blank") Adventurekeys
+        a.font-bold(href="https://adventurekeys.com/" target="_blank" rel="nofollow") Adventurekeys
         | &ensp;vorbei
     .flex-1.mx-8.flex.flex-col.items-center.my-4
       .border-2.rounded-full.bg-secondary.text-black.h-12.w-12.flex.justify-center.items-center.mb-3
