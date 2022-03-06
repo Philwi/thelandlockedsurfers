@@ -4,13 +4,27 @@ import axios from 'axios'
 
 const PRODUCT_CONTENT_TYPE_ID = 'blogPost'
 const CONTENTFUL_API_TOKEN = import.meta.env?.VITE_CONTENTFUL_API_TOKEN || process.env.VITE_CONTENTFUL_API_TOKEN
+const CONTENTFUL_PREVIEW_API_TOKEN =
+  import.meta.env?.VITE_CONTENTFUL_PREVIEW_API_TOKEN || process.env.VITE_CONTENTFUL_PREVIEW_API_TOKEN
 const CONTENTFUL_SPACE_ID = import.meta.env?.VITE_CONTENTFUL_SPACE_ID || process.env.VITE_CONTENTFUL_SPACE_ID
+const CONTENTFUL_HOST = import.meta.env?.VITE_CONTENTFUL_HOST || process.env.VITE_CONTENTFUL_SPACE_ID
 
+const contentfulClient = createClient(contentfulConfig())
 
-const contentfulClient = createClient({
-  accessToken: CONTENTFUL_API_TOKEN,
-  space: CONTENTFUL_SPACE_ID
-})
+function contentfulConfig() {
+  if (import.meta?.env?.MODE == 'development') {
+    return {
+      accessToken: CONTENTFUL_PREVIEW_API_TOKEN,
+      space: CONTENTFUL_SPACE_ID,
+      host: CONTENTFUL_HOST
+    }
+  } else {
+    return {
+      accessToken: CONTENTFUL_API_TOKEN,
+      space: CONTENTFUL_SPACE_ID
+    }
+  }
+}
 
 export const callGetBlogPostEntriesFromContentful = async () => {
   if (import.meta.env.MODE == 'development') {

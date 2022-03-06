@@ -41,14 +41,14 @@ export default defineComponent({
       return this.store.blogEntries.slice(1, 3)
     },
     elementsForTwoElements() {
-      return this.store.blogEntries.slice(4, 5)
+      return this.store.blogEntries.slice(3, 4)
     },
     elementsForRightMoreSpaceThanLeft() {
-      return this.store.blogEntries.slice(6, 7)
+      return this.store.blogEntries.slice(4, 5)
     },
     restElements() {
       const lengthBlogEntries = this.store.blogEntries.length
-      return this.store.blogEntries.slice(8, lengthBlogEntries - 1)
+      return this.store.blogEntries.slice(5, lengthBlogEntries - 1)
     }
   }
 })

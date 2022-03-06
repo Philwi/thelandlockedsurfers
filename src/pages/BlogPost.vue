@@ -16,11 +16,13 @@ import { BlogEntryComputedMixin } from '@/mixins'
 import BlogPostHeader from '@/components/blog-post/Header.vue'
 import ParagraphElement from '@/components/blog-post/ParagraphElement.vue'
 import HeadingElement from '@/components/blog-post/HeadingElement.vue'
+import Heading2Element from '@/components/blog-post/Heading2Element.vue'
 import ImageElement from '@/components/blog-post/ImageElement.vue'
+import UnorderedListElement from '@/components/blog-post/UnorderedListElement.vue'
 
 export default defineComponent({
   mixins: [BlogEntryComputedMixin],
-  components: { BlogPostHeader, ImageElement, HeadingElement, ParagraphElement },
+  components: { BlogPostHeader, ImageElement, HeadingElement, Heading2Element, ParagraphElement, UnorderedListElement },
   setup() {
     const route = useRoute()
     const store = blogStore()
@@ -43,8 +45,12 @@ export default defineComponent({
           return 'ParagraphElement'
         case 'heading-1':
           return 'HeadingElement'
+        case 'heading-2':
+          return 'Heading2Element'
         case 'embedded-asset-block':
           return 'ImageElement'
+        case 'unordered-list':
+          return 'UnorderedListElement'
       }
     }
   }

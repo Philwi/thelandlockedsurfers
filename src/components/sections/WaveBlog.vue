@@ -23,8 +23,7 @@ export default defineComponent({
   },
   computed: {
     lastBlogEntries() {
-      const blogEntriesCount = this.store.getBlogEntries.length
-      return this.store.getBlogEntries.slice(blogEntriesCount - 3, blogEntriesCount)
+      return this.store.getBlogEntries.slice(0, 3)
     }
   },
 })

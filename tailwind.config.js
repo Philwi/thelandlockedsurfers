@@ -17,6 +17,7 @@ module.exports = {
       purple: colors.purple,
       blue: colors.blue,
       gray: colors.gray,
+      orange: colors.orange,
     },
     fontFamily: {
       "pt-serif": ["PT Serif", "serif"],

@@ -38,6 +38,8 @@ export default defineComponent({
           return { bg: '!bg-purple-200', text: '!text-purple-800' }
         case 'route':
           return { bg: '!bg-blue-200', text: '!text-white-800' }
+        case 'fitness':
+          return { bg: '!bg-orange-200', text: '!text-orange-800' }
         default:
           return { bg: '!bg-gray-200', text: '!text-gray-800' }
       }
