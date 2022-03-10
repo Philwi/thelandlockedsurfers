@@ -14,15 +14,15 @@ import { defineComponent } from 'vue'
 import { useRoute } from 'vue-router'
 import { BlogEntryComputedMixin } from '@/mixins'
 import BlogPostHeader from '@/components/blog-post/Header.vue'
-import ParagraphElement from '@/components/blog-post/ParagraphElement.vue'
+import TextElement from '@/components/blog-post/TextElement.vue'
 import HeadingElement from '@/components/blog-post/HeadingElement.vue'
 import Heading2Element from '@/components/blog-post/Heading2Element.vue'
-import ImageElement from '@/components/blog-post/ImageElement.vue'
+import MediaElement from '@/components/blog-post/MediaElement.vue'
 import UnorderedListElement from '@/components/blog-post/UnorderedListElement.vue'
 
 export default defineComponent({
   mixins: [BlogEntryComputedMixin],
-  components: { BlogPostHeader, ImageElement, HeadingElement, Heading2Element, ParagraphElement, UnorderedListElement },
+  components: { BlogPostHeader, MediaElement, HeadingElement, Heading2Element, TextElement, UnorderedListElement },
   setup() {
     const route = useRoute()
     const store = blogStore()
@@ -42,13 +42,13 @@ export default defineComponent({
       const elementType = textElement.nodeType
       switch (elementType) {
         case 'paragraph':
-          return 'ParagraphElement'
+          return 'TextElement'
         case 'heading-1':
           return 'HeadingElement'
         case 'heading-2':
           return 'Heading2Element'
         case 'embedded-asset-block':
-          return 'ImageElement'
+          return 'MediaElement'
         case 'unordered-list':
           return 'UnorderedListElement'
       }
