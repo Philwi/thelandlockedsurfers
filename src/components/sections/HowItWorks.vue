@@ -24,7 +24,7 @@ section.bg-black.text-white.sectionSize
     .flex-1.mx-8.flex.flex-col.items-center.my-4
       .border-2.rounded-full.bg-secondary.text-black.h-12.w-12.flex.justify-center.items-center.mb-3
         Routes
-      h3.font-montserrat.font-medium.text-xl.mb-2 Routeplanung
+      h3.font-montserrat.font-medium.text-xl.mb-2 Routenplanung
       p.text-center.font-montserrat
         | Wir wollen in den Süden! Frankreich, Spanien, Portugal an die Antlantikküste!
         | Unser Ziel ist die Atlantikküste. Wind, Wellen und Sand unter den Füßen.
