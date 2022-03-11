@@ -42,10 +42,10 @@ nav.fixed.flex.justify-between.py-6.w-full.px-4.content-center.bg-secondary.z-10
     //   text: 'Über uns',
     //   path: '/ueber-uns'
     // },
-    // {
-    //   text: 'Ernährung',
-    //   path: '/ernaehrung'
-    // },
+    {
+      text: 'Wir für Euch',
+      path: '/wir-fuer-euch'
+    },
     {
       text: 'Merch',
       path: 'https://www.etsy.com/de/shop/saltypotatostore',

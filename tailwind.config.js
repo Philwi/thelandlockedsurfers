@@ -49,6 +49,9 @@ module.exports = {
           },
         },
       },
+      spacing: {
+        '128': '32rem',
+      },
       animation: {
         "fade-in-down": "fade-in-down 0.5s ease-out",
       },

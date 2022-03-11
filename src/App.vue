@@ -26,7 +26,6 @@ export default defineComponent({
     $route: {
       immediate: true,
       handler(to, _from) {
-        console.log(to)
         const title = this.buildTitle(to)
         document.title = title
         this.setCurrentPageToStore(title, to.fullPath)
