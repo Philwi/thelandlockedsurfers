@@ -33,13 +33,16 @@ section.pt-24.flex.flex-col.justify-center.text-center.px-4.bg-secondary.w-full(
           | Webseiten & Web-Applikationen
         p
           | Wenn du eine neue Internetpräsenz benötigst. Ein Portfolio, eine Chat-App, einen einzigartigen Blog oder die nächste große Business-Idee
-          | und dafür eine PWA benötigst. Philipp kann dir dabei sicher weiterhelfen.
+          | und dafür eine PWA benötigst. Phil kann dir dabei sicher weiterhelfen.
       div(:class="flexClass")
         TshirtVOutline.inline.text-2xl
         h2(:class="headlineClass")
           | T-Shirt Designs
         | Gefällt dir eine Arbeit von Lena besonders gut oder hast du eine einzigartige Idee für ein neues T-Shirt Design, aber dir fehlt
         | das Handwerkszeug um dieser Idee Leben einzuhauchen. Dann ist Lena die richtige Person.
+        |
+        a.underline(href='https://www.etsy.com/de/shop/saltypotatostore' target="_blank" rel="nofollow")
+          | Hier findest du bereits existierende T-Shirt Designs.
 
 </template>
 
