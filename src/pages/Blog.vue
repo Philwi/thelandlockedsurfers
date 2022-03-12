@@ -38,17 +38,17 @@ export default defineComponent({
   },
   computed: {
     elementsForThreeElements() {
-      return this.store.blogEntries.slice(1, 3)
+      return this.store.blogEntries.slice(1, 4)
     },
     elementsForTwoElements() {
-      return this.store.blogEntries.slice(3, 4)
+      return this.store.blogEntries.slice(4, 6)
     },
     elementsForRightMoreSpaceThanLeft() {
-      return this.store.blogEntries.slice(4, 5)
+      return this.store.blogEntries.slice(6, 8)
     },
     restElements() {
       const lengthBlogEntries = this.store.blogEntries.length
-      return this.store.blogEntries.slice(5, lengthBlogEntries - 1)
+      return this.store.blogEntries.slice(8, lengthBlogEntries - 1)
     }
   }
 })
