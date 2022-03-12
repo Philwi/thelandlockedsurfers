@@ -8,7 +8,7 @@ section.pt-24.flex.flex-col.justify-center.text-center.px-4.bg-secondary.w-full(
     h1.font-pt-serif.text-4xl.font-bold.my-7
       | Wir können ein paar Dinge!
     .font-montserrat.mt-8
-      SecondaryButton.mb-8(text="Frag uns an!" path="mailto:thelandlockedsurfers@gmail.com?subject=Anfrage" anotherPage="true")
+      SecondaryButton.mb-8(text="Frag uns an!" path="mailto:thelandlockedsurfers@gmail.com?subject=Anfrage" anotherPage=true)
 
   .justify-around.mt-8.grow(class='md:block md:mt-0 xl:flex-1')
     .flex.flex-col(class="lg:flex-row")
@@ -43,14 +43,15 @@ section.pt-24.flex.flex-col.justify-center.text-center.px-4.bg-secondary.w-full(
 
 </template>
 
-<script>
+<script lang="ts">
 import { AccountBoxOutline, Laptop, Palette, TshirtVOutline } from 'mdue'
 import PrimaryButton from '@/components/buttons/PrimaryButton.vue'
 import SecondaryButton from '@/components/buttons/SecondaryButton.vue'
+import VLazyImage from "v-lazy-image"
 
 export default {
   components: {
-    AccountBoxOutline, Laptop, Palette, TshirtVOutline, PrimaryButton, SecondaryButton
+    AccountBoxOutline, Laptop, Palette, TshirtVOutline, PrimaryButton, SecondaryButton, VLazyImage
   },
   computed: {
     flexClass() {
