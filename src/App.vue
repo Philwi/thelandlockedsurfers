@@ -26,9 +26,8 @@ export default defineComponent({
     $route: {
       immediate: true,
       handler(to, _from) {
-        const title = this.buildTitle(to)
-        document.title = title
-        this.setCurrentPageToStore(title, to.fullPath)
+        document.title = this.buildTitle(to)
+        this.setCurrentPageToStore(this.buildTitle(to), to.fullPath)
       }
     }
   },

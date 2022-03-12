@@ -1,6 +1,6 @@
 <template lang="pug">
 section.pt-24.flex.flex-col.justify-center.text-center.px-4.bg-secondary.w-full(
-  class='xl:mt-0 xl:h-full xl:flex-row xl:justify-between xl:items-center xl:px-48 md:px-12 md:mr-10'
+  class='xl:mt-0 xl:h-full xl:flex-row xl:justify-between xl:items-center xl:px-24 lg:px-12 md:mr-10'
   )
   .justify-around.p-0(class='md:block md:mt-0 xl:flex-1 basis-1/3 md:pb-16 md:p-8')
     img.justify-center.inline.h-72(src='@/assets/mountain.png' alt='Drawed Mountain' class="md:rounded-8xl lg:h-128")
