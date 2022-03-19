@@ -12,7 +12,5 @@ describe('Blog Test', () => {
     cy.get('p').contains('The Landlocked Surfers')
     cy.get('p').contains('Willkommen auf unserem Blog')
     cy.title().should('eq', 'The Landlocked Surfers - Blog Übersicht')
-    cy.contains('Auf der Suche nach einem Gitarrenamp für unterwegs').click()
-    cy.title().should('eq', 'The Landlocked Surfers - Blog Post | Auf der Suche nach einem Gitarrenamp für unterwegs')
   })
 })

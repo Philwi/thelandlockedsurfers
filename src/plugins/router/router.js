@@ -1,21 +1,27 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { blogStore } from '@/plugins/store'
-import AboutUs from '@/pages/AboutUs.vue'
 import Blog from '@/pages/Blog.vue'
 import BlogPost from '@/pages/BlogPost.vue'
 import Index from '@/pages/Index.vue'
-import Lena from '@/pages/about-us/Lena.vue'
-import Philipp from '@/pages/about-us/Philipp.vue'
 import WeForYou from '@/pages/WeForYou.vue'
 
 const routes = [
   { path: '/', component: Index },
-  { path: '/blog', component: Blog, meta: { title: 'Blog Übersicht' } },
+  { path: '/blog', component: Blog,
+    meta: {
+      title: 'Blog Übersicht',
+      description: 'Auf unserem Blog erfahrt ihr alle Neuigkeiten von uns rund um die Themen Surfen, Wohnmobil und Reisen. Unsere Katze Winnie ist immer mit dabei. :)',
+      keywords: 'Surfen, Wohnmobil, Reisen, Katzen'
+    }
+  },
   { path: '/blog/:id', component: BlogPost, meta: { title: 'Blog Post' } },
-  // { path: '/ueber-uns', component: AboutUs, meta: { title: 'Über uns' } },
-  // { path: '/ueber-uns/philipp', component: Philipp },
-  // { path: '/ueber-uns/lena', component: Lena },
-  { path: '/wir-fuer-euch', component: WeForYou, meta: { title: 'Wir für Euch!' } },
+  { path: '/wir-fuer-euch', component: WeForYou,
+    meta: {
+      title: 'Wir für Euch!',
+      description: 'The Landlocked Surfers sind nicht nur zwei Vagabunde. Wir können auch hochqualitative Arbeit anbieten. Egal ob T-Shirt Design oder eine moderne Web-App.',
+      keywords: 'T-Shirt, Design, Web-App, Website'
+    }
+  },
   { path: '/:pathMatch(.*)', component: Index }
 ]
 
