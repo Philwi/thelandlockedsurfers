@@ -41,7 +41,6 @@ section.bg-black.text-white.sectionSize
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { Update, Caravan, Laptop } from 'mdue'
-import backgroundVideo from '@/assets/about-us/header.webm'
 
 export default defineComponent({
   components: {
