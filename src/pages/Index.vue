@@ -1,21 +1,21 @@
 <template lang="pug">
 HeroStage
 HowItWorks
-WaveWithImage(
-  :imageSrc="topWaveWithImageProps.imageSrc"
+WaveWithContent(
   :mainColorCssClass="topWaveWithImageProps.mainColorCssClass"
   :secondaryColorCssClass="topWaveWithImageProps.secondaryColorCssClass"
   :svgFillColor="topWaveWithImageProps.svgFillColor"
   )
+  VLazyImage.h-128.z-10.object-contain(:src="topWaveWithImageProps.imageSrc")
 TextElementsWithIcon
 WaveBlog
 Merch
-WaveWithImage(
-  :imageSrc="bottomWaveWithImageProps.imageSrc"
+WaveWithContent(
   :mainColorCssClass="bottomWaveWithImageProps.mainColorCssClass"
   :secondaryColorCssClass="bottomWaveWithImageProps.secondaryColorCssClass"
   :svgFillColor="bottomWaveWithImageProps.svgFillColor"
   )
+  VLazyImage.h-128.z-10.object-contain(:src="bottomWaveWithImageProps.imageSrc")
 FAQ
 </template>
 
@@ -27,14 +27,15 @@ import HeroStage from '@/components/sections/HeroStage.vue'
 import HowItWorks from '@/components/sections/HowItWorks.vue'
 import Merch from '@/components/sections/Merch.vue'
 import WaveBlog from '@/components/sections/WaveBlog.vue'
-import WaveWithImage from '@/components/sections/WaveWithImage.vue'
+import WaveWithContent from '@/components/sections/WaveWithContent.vue'
 import IceBear from '@/assets/ice_bear.png'
 import Waschbaer from '@/assets/waschbaer.png'
+import VLazyImage from "v-lazy-image"
 
 export default defineComponent({
   name: 'IndexPage',
   components: {
-    FAQ, TextElementsWithIcon, HeroStage, HowItWorks, Merch, WaveBlog, WaveWithImage
+    FAQ, TextElementsWithIcon, HeroStage, HowItWorks, Merch, WaveBlog, WaveWithContent, VLazyImage
   },
   data() {
     return {

@@ -4,7 +4,10 @@
   .container.px-4.max-w-6xl.mx-auto(class='-mt-32 md:px-0')
     .mx-0(class='sm:mx-6')
       template(v-if="store?.getBlogEntries?.length > 0")
-        FirstMainElement(:blogEntry="store.blogEntries[0]")
+        FirstMainElement(:blogEntry="store.filteredBlogEntries[0]")
+        template(v-if="store.filteredBlogEntries.length === 0")
+          FirstMainElement(:blogEntry="defaultBlogEntry")
+        SearchElement
         .flex.flex-wrap.justify-between.pt-12.-mx-6
           // render first 1-3
           ThreeElements(:blogEntries="elementsForThreeElements")
@@ -24,13 +27,14 @@ import BlogTopElement from '@/components/blog/BlogTopElement.vue'
 import CardForIndex from '@/components/blog/CardForIndex.vue'
 import FirstMainElement from '@/components/blog/FirstMainElement.vue'
 import RightMoreSpaceThanLeft from '@/components/blog/RightMoreSpaceThanLeft.vue'
+import SearchElement from '@/components/blog/SearchElement.vue'
 import ThreeElements from '@/components/blog/ThreeElements.vue'
 import TwoElements from '@/components/blog/TwoElements.vue'
 
 export default defineComponent({
   name: 'BlogIndexPage',
   components: {
-    BlogTopElement, CardForIndex, FirstMainElement, ThreeElements, TwoElements, RightMoreSpaceThanLeft
+    BlogTopElement, CardForIndex, FirstMainElement, ThreeElements, TwoElements, RightMoreSpaceThanLeft, SearchElement
   },
   setup() {
     const store = blogStore()
@@ -38,18 +42,59 @@ export default defineComponent({
     return { store }
   },
   computed: {
+    defaultBlogEntry() {
+      return {
+        fields: {
+          author: {
+            fields: {
+              avatar: {
+                fields: {
+                  name: 'Philena',
+                  file: {
+                    url: 'src/assets/waschbaer.png'
+                  }
+                }
+              }
+            }
+          },
+          headline: 'Leider keinen Blog-Eintrag gefunden',
+          text: {
+            content: [
+              {
+                content: [{
+                  value: 'Du musst vielleicht einfach einen anderen Suchbegriff oder ein anderes Tag probieren.'
+                }],
+                nodeType: 'paragraph',
+              }
+            ]
+          },
+          previewImage: {
+            fields: {
+              file: {
+                url: 'src/assets/waschbaer.png'
+              }
+            }
+          },
+          createdAt: '2019-01-01T00:00:00.000Z',
+          readingTime: '1'
+        },
+        sys: {
+          id: '1'
+        }
+      }
+    },
     elementsForThreeElements() {
-      return this.store.blogEntries.slice(1, 4)
+      return this.store.filteredBlogEntries.slice(1, 4)
     },
     elementsForTwoElements() {
-      return this.store.blogEntries.slice(4, 6)
+      return this.store.filteredBlogEntries.slice(4, 6)
     },
     elementsForRightMoreSpaceThanLeft() {
-      return this.store.blogEntries.slice(6, 8)
+      return this.store.filteredBlogEntries.slice(6, 8)
     },
     restElements() {
-      const lengthBlogEntries = this.store.blogEntries.length
-      return this.store.blogEntries.slice(8, lengthBlogEntries - 1)
+      const lengthBlogEntries = this.store.filteredBlogEntries.length
+      return this.store.filteredBlogEntries.slice(8, lengthBlogEntries - 1)
     }
   }
 })

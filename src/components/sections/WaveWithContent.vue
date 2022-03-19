@@ -1,7 +1,7 @@
 <template lang="pug">
 section.sectionSize.h-8.pt-0.pb-0(class="lg:h-24" :class="mainColorCssClass")
-  .flex.justify-center(v-if="!!imageSrc")
-    VLazyImage.h-128.z-10.object-contain(:src="imageSrc")
+  .flex.justify-center
+    slot
 svg.z-0.pb-80(
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 1440 320"
@@ -13,17 +13,9 @@ svg.z-0.pb-80(
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import VLazyImage from "v-lazy-image"
 
 export default defineComponent({
-  components: {
-    VLazyImage
-  },
   props: {
-    imageSrc: {
-      required: true,
-      type: String
-    },
     mainColorCssClass: {
       required: true,
       type: String

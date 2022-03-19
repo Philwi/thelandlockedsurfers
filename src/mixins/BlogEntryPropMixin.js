@@ -1,5 +1,3 @@
-import Tag from '@/components/tags/Tag.vue'
-
 export let BlogEntryPropMixin = {
   props: {
     blogEntry: {
@@ -87,8 +85,5 @@ export let BlogEntryPropMixin = {
         }
       }
     }
-  },
-  components: {
-    Tag
   }
 }
