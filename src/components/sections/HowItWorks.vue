@@ -34,8 +34,8 @@ section.bg-black.text-white.sectionSize
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import TertiaryButton from '@/components/buttons/TertiaryButton.vue'
 import { Wave, Caravan, Routes } from 'mdue'
+import TertiaryButton from '@/components/buttons/TertiaryButton.vue'
 
 export default defineComponent({
   name: 'HowItWorks',

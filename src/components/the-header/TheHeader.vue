@@ -1,5 +1,5 @@
 <template lang="pug">
-nav.fixed.flex.justify-between.py-6.w-full.px-4.content-center.bg-secondary.z-10(class='lg:px-48 md:px-12')
+nav.fixed.flex.justify-between.py-6.w-full.px-4.content-center.bg-secondary.z-20(class='lg:px-48 md:px-12')
   .flex.items-center
     RouterLink(to="/")
       img.h-8(src='../../assets/Logo_black.webp' alt='Logo')

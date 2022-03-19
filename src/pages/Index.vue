@@ -1,6 +1,7 @@
 <template lang="pug">
 HeroStage
 HowItWorks
+WaveWithImage
 Features
 WaveBlog
 Pricing
@@ -15,11 +16,14 @@ import HeroStage from '@/components/sections/HeroStage.vue'
 import HowItWorks from '@/components/sections/HowItWorks.vue'
 import Pricing from '@/components/sections/Pricing.vue'
 import WaveBlog from '@/components/sections/WaveBlog.vue'
+import WaveWithImage from '@/components/sections/WaveWithImage.vue'
 
 export default defineComponent({
   components: {
-    FAQ, Features, HeroStage, HowItWorks, Pricing, WaveBlog
+    FAQ, Features, HeroStage, HowItWorks, Pricing, WaveBlog, WaveWithImage
   }
 })
 </script>
 
+<style scoped="">
+</style>
