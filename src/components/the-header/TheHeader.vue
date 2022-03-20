@@ -10,10 +10,6 @@ nav.fixed.flex.justify-between.py-6.w-full.px-4.content-center.bg-secondary.z-20
           a(:href='link.path' :target="link.target") {{ link.text }}
         template(v-else)
           RouterLink(:to='link.path') {{ link.text }}
-  // .font-montserrat.hidden(class='md:block')
-    button.mr-6 Login
-    button.py-2.px-4.text-white.bg-black.rounded-3xl
-      | Signup
   #showMenu.cursor-pointer(class='md:hidden' @click="toggleMenu")
     img(src='../../assets/logos/Menu.svg' alt='Menu icon')
 #mobileNav.hidden.px-4.py-6.fixed.top-0.left-0.h-full.w-full.bg-secondary.z-20.animate-fade-in-down
@@ -28,43 +24,47 @@ nav.fixed.flex.justify-between.py-6.w-full.px-4.content-center.bg-secondary.z-20
           RouterLink(:to='link.path' @click="toggleMenu") {{ link.text }}
 </template>
 
-<script setup lang="ts">
-  const navigationLinks = [
-    {
-      text: 'Home',
-      path: '/'
-    },
-    {
-      text: 'Blog',
-      path: '/blog'
-    },
-    // {
-    //   text: 'Über uns',
-    //   path: '/ueber-uns'
-    // },
-    {
-      text: 'Wir für Euch',
-      path: '/wir-fuer-euch'
-    },
-    {
-      text: 'Merch',
-      path: 'https://www.etsy.com/de/shop/saltypotatostore',
-      target: '_blank'
-    },
-  ]
+<script lang="ts">
+import { defineComponent } from 'vue'
 
-let hideMenu = true
+export default defineComponent({
+  data() {
+    return {
+      navigationLinks: [
+        {
+          text: 'Home',
+          path: '/'
+        },
+        {
+          text: 'Blog',
+          path: '/blog'
+        },
+        {
+          text: 'Wir für Euch',
+          path: '/wir-fuer-euch'
+        },
+        {
+          text: 'Merch',
+          path: 'https://www.etsy.com/de/shop/saltypotatostore',
+          target: '_blank'
+        },
+      ],
+      hideMenu: true,
+    }
+  },
+  methods: {
+    toggleMenu() {
+      this.hideMenu = !this.hideMenu
 
-const toggleMenu = function(): void {
-  hideMenu = !hideMenu
-
-  if (hideMenu) {
-    document.querySelector('#mobileNav')?.classList.remove('hidden')
-  } else {
-    document.querySelector('#mobileNav')?.classList.add('hidden')
+      if (this.hideMenu) {
+        document.querySelector('#mobileNav')?.classList.add('hidden')
+      } else {
+        document.querySelector('#mobileNav')?.classList.remove('hidden')
+      }
+    }
   }
-}
-  </script>
+})
+</script>
 
 <style scoped>
 nav {

@@ -28,13 +28,14 @@ import ThreeElements from '@/components/blog/ThreeElements.vue'
 import TwoElements from '@/components/blog/TwoElements.vue'
 
 export default defineComponent({
+  name: 'BlogIndexPage',
+  components: {
+    BlogTopElement, CardForIndex, FirstMainElement, ThreeElements, TwoElements, RightMoreSpaceThanLeft
+  },
   setup() {
     const store = blogStore()
 
     return { store }
-  },
-  components: {
-    BlogTopElement, CardForIndex, FirstMainElement, ThreeElements, TwoElements, RightMoreSpaceThanLeft
   },
   computed: {
     elementsForThreeElements() {

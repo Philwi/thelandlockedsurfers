@@ -6,6 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "style:fix": "eslint --ext .js,.vue src",
     "test": "jest",
     "cypress:open": "cypress open"
   },

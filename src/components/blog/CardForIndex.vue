@@ -20,11 +20,11 @@
 import { defineComponent } from 'vue'
 import { BlogEntryPropMixin } from '@/mixins'
 import { BlogEntryComputedMixin } from '@/mixins'
-import VLazyImage from "v-lazy-image";
+import VLazyImage from "v-lazy-image"
 
 export default defineComponent({
-  mixins: [BlogEntryComputedMixin, BlogEntryPropMixin],
   components: { VLazyImage },
+  mixins: [BlogEntryComputedMixin, BlogEntryPropMixin],
   props: {
     responsiveClass: {
       type: String,

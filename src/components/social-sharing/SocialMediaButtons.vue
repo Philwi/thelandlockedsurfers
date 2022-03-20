@@ -20,13 +20,13 @@ import { Email, Facebook,  Pinterest, Quora, Reddit, Telegram, Twitter, Whatsapp
 import WomoImage from '@/assets/womo-zeichnung-color.png'
 
 export default defineComponent({
+  components: {
+    Email, Facebook, Pinterest, Quora, Reddit, Telegram, Twitter, Whatsapp, Xing
+  },
   setup() {
     const currentPageStore = rootStore()
 
     return { currentPageStore }
-  },
-  components: {
-    Email, Facebook, Pinterest, Quora, Reddit, Telegram, Twitter, Whatsapp, Xing
   },
   data() {
     return {
@@ -40,17 +40,18 @@ export default defineComponent({
         { network: 'twitter', name: 'Twitter', icon: 'fab fah fa-lg fa-twitter', color: '#1da1f2' },
         { network: 'whatsapp', name: 'Whatsapp', icon: 'fab fah fa-lg fa-whatsapp', color: '#25d366' },
         { network: 'xing', name: 'Xing', icon: 'fab fah fa-lg fa-xing', color: '#026466' },
-      ]
-    }
-  },
-  methods: {
-    styleFromColor(color: string): string {
-      return `color: ${color}`
+      ],
+      WomoImage: WomoImage
     }
   },
   computed: {
-    sharing(): object {
+    sharing() {
       return this.currentPageStore.getCurrentPage
+    }
+  },
+  methods: {
+    styleFromColor(color) {
+      return `color: ${color}`
     }
   }
 })

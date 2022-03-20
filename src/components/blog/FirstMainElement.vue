@@ -30,8 +30,8 @@ import VLazyImage from "v-lazy-image"
 
 
 export default defineComponent({
-  mixins: [BlogEntryComputedMixin, BlogEntryPropMixin],
-  components: { VLazyImage }
+  components: { VLazyImage },
+  mixins: [BlogEntryComputedMixin, BlogEntryPropMixin]
 })
 </script>
 

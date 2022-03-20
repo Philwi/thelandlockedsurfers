@@ -21,8 +21,9 @@ import ImageElement from '@/components/blog-post/ImageElement.vue'
 import UnorderedListElement from '@/components/blog-post/UnorderedListElement.vue'
 
 export default defineComponent({
-  mixins: [BlogEntryComputedMixin],
+  name: 'BlogPostPage',
   components: { BlogPostHeader, ImageElement, HeadingElement, Heading2Element, ParagraphElement, UnorderedListElement },
+  mixins: [BlogEntryComputedMixin],
   setup() {
     const route = useRoute()
     const store = blogStore()
@@ -38,7 +39,7 @@ export default defineComponent({
     }
   },
   methods: {
-    decideWhichTextElementToRender(textElement: String): String {
+    decideWhichTextElementToRender(textElement) {
       const elementType = textElement.nodeType
       switch (elementType) {
         case 'paragraph':

@@ -10,11 +10,6 @@ template(v-for="element in textElements")
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  data() {
-    return {
-      textElements: []
-    }
-  },
   props: {
     textElement: {
       type: Object,
@@ -22,6 +17,11 @@ export default defineComponent({
       content: {
         type: Array
       }
+    }
+  },
+  data() {
+    return {
+      textElements: []
     }
   },
   created() {

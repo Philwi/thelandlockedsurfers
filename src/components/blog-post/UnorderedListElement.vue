@@ -8,10 +8,6 @@ ul.mb-5.pb-6.bg-white
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  data() {
-    return {
-    }
-  },
   props: {
     textElement: {
       type: Object,
@@ -21,8 +17,12 @@ export default defineComponent({
       }
     }
   },
+  data() {
+    return {
+    }
+  },
   methods: {
-    getValueFromTextElement(list: { content: [{content: [{value: string}]}] }) {
+    getValueFromTextElement(list) {
       return list?.content[0]?.content[0]?.value
     }
   }

@@ -7,9 +7,9 @@ WaveWithImage(
   :secondaryColorCssClass="topWaveWithImageProps.secondaryColorCssClass"
   :svgFillColor="topWaveWithImageProps.svgFillColor"
   )
-Features
+TextElementsWithIcon
 WaveBlog
-Pricing
+Merch
 WaveWithImage(
   :imageSrc="bottomWaveWithImageProps.imageSrc"
   :mainColorCssClass="bottomWaveWithImageProps.mainColorCssClass"
@@ -22,16 +22,20 @@ FAQ
 <script lang="ts">
 import { defineComponent } from 'vue'
 import FAQ from '@/components/sections/FAQ.vue'
-import Features from '@/components/sections/Features.vue'
+import TextElementsWithIcon from '@/components/sections/TextElementsWithIcon.vue'
 import HeroStage from '@/components/sections/HeroStage.vue'
 import HowItWorks from '@/components/sections/HowItWorks.vue'
-import Pricing from '@/components/sections/Pricing.vue'
+import Merch from '@/components/sections/Merch.vue'
 import WaveBlog from '@/components/sections/WaveBlog.vue'
 import WaveWithImage from '@/components/sections/WaveWithImage.vue'
 import IceBear from '@/assets/ice_bear.png'
 import Waschbaer from '@/assets/waschbaer.png'
 
 export default defineComponent({
+  name: 'IndexPage',
+  components: {
+    FAQ, TextElementsWithIcon, HeroStage, HowItWorks, Merch, WaveBlog, WaveWithImage
+  },
   data() {
     return {
       topWaveWithImageProps: {
@@ -47,9 +51,6 @@ export default defineComponent({
         svgFillColor: '#F4F2ED'
       }
     }
-  },
-  components: {
-    FAQ, Features, HeroStage, HowItWorks, Pricing, WaveBlog, WaveWithImage
   }
 })
 </script>

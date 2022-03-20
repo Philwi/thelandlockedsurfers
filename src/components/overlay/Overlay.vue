@@ -17,8 +17,10 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
+  name: 'SocialMediaButtonOverlay',
+  emits: ['closeOverlay'],
   methods: {
-    closeOverlay(): void {
+    closeOverlay() {
       this.$emit('closeOverlay')
     }
   }
