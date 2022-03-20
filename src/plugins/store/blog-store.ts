@@ -8,7 +8,7 @@ export const blogStore = defineStore('blogStore', {
     }
   },
   getters: {
-    getBlogEntries(state): Array {
+    getBlogEntries(state) {
       return state.blogEntries
     }
   },

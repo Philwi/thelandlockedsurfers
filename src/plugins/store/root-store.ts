@@ -11,12 +11,12 @@ export const rootStore = defineStore('root', {
     }
   },
   getters: {
-    getCurrentPage(state): object {
+    getCurrentPage(state) {
       return state.currentPage
     }
   },
   actions: {
-    setCurrentPage(currentPage: object) {
+    setCurrentPage(currentPage) {
       this.currentPage = currentPage
     }
   }
