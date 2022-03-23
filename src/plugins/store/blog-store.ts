@@ -1,23 +1,21 @@
 import { defineStore } from 'pinia'
+import { BlogEntry } from '@/types'
 
 export const blogStore = defineStore('blogStore', {
   state: () => {
     return {
-      blogEntries: [],
+      blogEntries: [] as BlogEntry[],
       authors: []
     }
   },
   getters: {
     getBlogEntries(state) {
       return state.blogEntries
-    }
+    },
   },
   actions: {
-    setAuthor(author) {
-      this.authors.push(author)
-    },
-    setBlogEntry(blogEntry) {
+    setBlogEntry(blogEntry: BlogEntry) {
       this.blogEntries.push(blogEntry)
-    }
+    },
   }
 })

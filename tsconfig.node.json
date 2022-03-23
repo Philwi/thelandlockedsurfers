@@ -1,8 +1,11 @@
 {
+  "extends": "./.eslintrc.js",
   "compilerOptions": {
+    "baseUrl": ".",
     "composite": true,
     "module": "esnext",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "paths": { "@/*": ["./src"] }
   },
   "include": ["vite.config.ts"]
 }
