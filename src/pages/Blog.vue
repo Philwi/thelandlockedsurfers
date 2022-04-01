@@ -80,7 +80,7 @@ export default defineComponent({
           readingTime: '1'
         },
         sys: {
-          id: '1'
+          id: 'no-blog-entry-found'
         }
       }
     },
@@ -96,6 +96,15 @@ export default defineComponent({
     restElements() {
       const lengthBlogEntries = this.store.filteredBlogEntries.length
       return this.store.filteredBlogEntries.slice(8, lengthBlogEntries - 1)
+    }
+  },
+  created() {
+    this.clearSearchBlogTitleAndTags()
+  },
+  methods: {
+    clearSearchBlogTitleAndTags() {
+      this.store.removeAllSearchTags()
+      this.store.removeSearchTitle()
     }
   }
 })

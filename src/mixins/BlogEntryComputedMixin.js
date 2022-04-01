@@ -10,6 +10,8 @@ export let BlogEntryComputedMixin = {
       return this.blogEntry.sys?.id
     },
     blogPath() {
+      if (this.blogId === 'no-blog-entry-found') return '/'
+
       return `/blog/${this.slugyfiedHeadline}?id=${this.blogId}`
     },
     createdAt() {

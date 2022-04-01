@@ -40,6 +40,12 @@ export const blogStore = defineStore('blogStore', {
     },
     removeSearchTag(searchTag: string) {
       this.searchTags = this.searchTags.filter(tag => tag !== searchTag)
+    },
+    removeAllSearchTags() {
+      this.searchTags = []
+    },
+    removeSearchTitle() {
+      this.searchTitle = ''
     }
   }
 })
