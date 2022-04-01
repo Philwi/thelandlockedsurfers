@@ -10,8 +10,7 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  setup() {
-  },
+  name: 'BlogPostHeader',
   props: {
     headline: {
       type: String,

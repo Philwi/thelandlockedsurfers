@@ -3,7 +3,7 @@
   .flex.h-full.bg-white.rounded.overflow-hidden.shadow-lg
     RouterLink.flex.flex-wrap.no-underline(:to='blogPath' class='hover:no-underline')
       .w-full.rounded-t(class='md:w-2/3')
-        VLazyImage.h-full.w-full.shadow.object-cover(:src='previewImageUrl')
+        VLazyImage.h-128.w-full.shadow.object-cover(:src='previewImageUrl')
       .w-full.flex.flex-col.flex-grow.flex-shrink(class='md:w-1/3')
         .flex-1.bg-white.rounded-t.rounded-b-none.overflow-hidden.shadow-lg
           p.w-full.text-gray-600.text-xs.pt-6.px-6(class='md:text-sm') GRÜßT EUCH
@@ -17,7 +17,7 @@
             img.w-8.h-8.rounded-full.mr-4.avatar(:data-tippy-content='authorName' :src='authorImageUrl' alt='Avatar of Author')
             .space-y-2
               template(v-for="tag in tags")
-                Tag(:tag="tag")
+                StyledTag(:tagName="tag.sys.id")
             p.text-gray-600.text-xs(class='md:text-sm') {{ readingTime }} Minuten Lesedauer
 
 </template>
@@ -26,12 +26,13 @@
 import { defineComponent } from 'vue'
 import { BlogEntryPropMixin } from '@/mixins'
 import { BlogEntryComputedMixin } from '@/mixins'
+import StyledTag from '@/components/blog-tags/StyledTag.vue'
 import VLazyImage from "v-lazy-image"
 
 
 export default defineComponent({
-  mixins: [BlogEntryComputedMixin, BlogEntryPropMixin],
-  components: { VLazyImage }
+  components: { StyledTag, VLazyImage },
+  mixins: [BlogEntryComputedMixin, BlogEntryPropMixin]
 })
 </script>
 

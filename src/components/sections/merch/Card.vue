@@ -12,6 +12,8 @@ import { defineComponent } from 'vue'
 import VLazyImage from "v-lazy-image"
 
 export default defineComponent({
+  name: 'CardComponentWithImageAndPrice',
+  components: { VLazyImage },
   props: {
     headline: {
       type: String,
@@ -34,14 +36,13 @@ export default defineComponent({
       required: true
     }
   },
-  components: { VLazyImage },
   computed: {
-    mdTopAlignment(): String {
+    mdTopAlignment() {
       return `md:top-${this.topAlignment}`
     }
   },
   methods: {
-    goToShop(): void {
+    goToShop() {
       window.open(this.url, '_blank').focus()
     }
   }

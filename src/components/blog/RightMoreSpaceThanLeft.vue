@@ -11,13 +11,13 @@ import { defineComponent } from 'vue'
 import CardForIndex from '@/components/blog/CardForIndex.vue'
 
 export default defineComponent({
+  components: { CardForIndex },
   props: {
     blogEntries: {
       type: Array,
       required: true
     }
-  },
-  components: { CardForIndex }
+  }
 })
 </script>
 

@@ -15,12 +15,16 @@ section.sectionSize.bg-secondary.py-12
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import Card from '@/components/sections/pricing/Card.vue'
+import Card from '@/components/sections/merch/Card.vue'
 import Medusa from '@/assets/salty-potato/medusa.jpg'
 import Sushi from '@/assets/salty-potato/sushi.avif'
 import Ice from '@/assets/salty-potato/ice.avif'
 
 export default defineComponent({
+  name: 'MerchandiseSection',
+  components: {
+    Card
+  },
   data() {
     return {
       cardElements: [
@@ -47,9 +51,6 @@ export default defineComponent({
         }
       ]
     }
-  },
-  components: {
-    Card
   }
 })
 </script>

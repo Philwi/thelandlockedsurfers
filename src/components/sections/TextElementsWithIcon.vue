@@ -13,12 +13,16 @@ section.sectionSize.bg-secondary
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import TextWithIcon from '@/components/sections/features/TextWithIcon.vue'
+import TextWithIcon from '@/components/sections/text-elements-with-icon/TextWithIcon.vue'
 import { Cat, WeightLifter, Caravan, Laptop } from 'mdue'
 
 export default defineComponent({
+  name: 'TextElementsWithIcon',
   components: {
     Cat, Caravan, TextWithIcon, WeightLifter, Laptop
+  },
+  setup() {
+
   },
   data() {
     return {
@@ -46,9 +50,6 @@ export default defineComponent({
         }
       ]
     }
-  },
-  setup() {
-
   }
 })
 </script>

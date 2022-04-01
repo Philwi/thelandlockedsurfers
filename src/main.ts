@@ -9,6 +9,7 @@ import './index.css'
 
 const pinia = createPinia()
 const app = createApp(App)
+
 // mount pinia before router because of when the store is defined
 // its in the router navigation stuff
 app.use(pinia)

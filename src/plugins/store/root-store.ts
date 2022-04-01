@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import { SeoPage } from '@/types'
 
 export const rootStore = defineStore('root', {
   state: () => {
@@ -11,12 +12,12 @@ export const rootStore = defineStore('root', {
     }
   },
   getters: {
-    getCurrentPage(state): object {
+    getCurrentPage(state) {
       return state.currentPage
     }
   },
   actions: {
-    setCurrentPage(currentPage: object) {
+    setCurrentPage(currentPage: SeoPage) {
       this.currentPage = currentPage
     }
   }

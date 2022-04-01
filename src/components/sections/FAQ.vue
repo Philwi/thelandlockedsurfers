@@ -34,7 +34,7 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   methods: {
-    toggleSubElement(refElement: String): void{
+    toggleSubElement(refElement) {
       const ref = this.$refs[refElement]
       const classListAry = new Array(...ref.classList)
 

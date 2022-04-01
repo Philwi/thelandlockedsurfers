@@ -1,37 +1,42 @@
 <template lang="pug">
 HeroStage
 HowItWorks
-WaveWithImage(
-  :imageSrc="topWaveWithImageProps.imageSrc"
+WaveWithContent(
   :mainColorCssClass="topWaveWithImageProps.mainColorCssClass"
   :secondaryColorCssClass="topWaveWithImageProps.secondaryColorCssClass"
   :svgFillColor="topWaveWithImageProps.svgFillColor"
   )
-Features
+  VLazyImage.h-128.z-10.object-contain(:src="topWaveWithImageProps.imageSrc")
+TextElementsWithIcon
 WaveBlog
-Pricing
-WaveWithImage(
-  :imageSrc="bottomWaveWithImageProps.imageSrc"
+Merch
+WaveWithContent(
   :mainColorCssClass="bottomWaveWithImageProps.mainColorCssClass"
   :secondaryColorCssClass="bottomWaveWithImageProps.secondaryColorCssClass"
   :svgFillColor="bottomWaveWithImageProps.svgFillColor"
   )
+  VLazyImage.h-128.z-10.object-contain(:src="bottomWaveWithImageProps.imageSrc")
 FAQ
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import FAQ from '@/components/sections/FAQ.vue'
-import Features from '@/components/sections/Features.vue'
+import TextElementsWithIcon from '@/components/sections/TextElementsWithIcon.vue'
 import HeroStage from '@/components/sections/HeroStage.vue'
 import HowItWorks from '@/components/sections/HowItWorks.vue'
-import Pricing from '@/components/sections/Pricing.vue'
+import Merch from '@/components/sections/Merch.vue'
 import WaveBlog from '@/components/sections/WaveBlog.vue'
-import WaveWithImage from '@/components/sections/WaveWithImage.vue'
+import WaveWithContent from '@/components/sections/WaveWithContent.vue'
 import IceBear from '@/assets/ice_bear.png'
 import Waschbaer from '@/assets/waschbaer.png'
+import VLazyImage from "v-lazy-image"
 
 export default defineComponent({
+  name: 'IndexPage',
+  components: {
+    FAQ, TextElementsWithIcon, HeroStage, HowItWorks, Merch, WaveBlog, WaveWithContent, VLazyImage
+  },
   data() {
     return {
       topWaveWithImageProps: {
@@ -47,9 +52,6 @@ export default defineComponent({
         svgFillColor: '#F4F2ED'
       }
     }
-  },
-  components: {
-    FAQ, Features, HeroStage, HowItWorks, Pricing, WaveBlog, WaveWithImage
   }
 })
 </script>

@@ -14,19 +14,16 @@ import Overlay from '@/components/overlay/Overlay.vue'
 import SocialMediaButtons from '@/components/social-sharing/SocialMediaButtons.vue'
 
 export default defineComponent({
-  setup() {
-
+  components: {
+    ShareVariant, SocialMediaButtons, Overlay
   },
   data() {
     return {
       toggledOverlay: false
     }
   },
-  components: {
-    ShareVariant, SocialMediaButtons, Overlay
-  },
   methods: {
-    toggleOverlay(): void {
+    toggleOverlay() {
       this.toggledOverlay = !this.toggledOverlay
     }
   }

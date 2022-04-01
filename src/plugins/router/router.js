@@ -33,6 +33,6 @@ export const router = createRouter({
   }
 })
 
-router.beforeEach((to) => {
-  const store = blogStore()
+router.beforeEach(() => {
+  blogStore()
 })

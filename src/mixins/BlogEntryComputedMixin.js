@@ -1,13 +1,13 @@
 export let BlogEntryComputedMixin = {
   computed: {
     authorImageUrl() {
-      return this.blogEntry.fields.author.fields.avatar.fields.file.url
+      return this.blogEntry.fields.author?.fields?.avatar?.fields?.file?.url
     },
     authorName() {
-      return this.blogEntry.fields.author.fields.name
+      return this.blogEntry.fields.author?.fields?.name
     },
     blogId() {
-      return this.blogEntry.sys.id
+      return this.blogEntry.sys?.id
     },
     blogPath() {
       return `/blog/${this.slugyfiedHeadline}?id=${this.blogId}`
@@ -19,7 +19,7 @@ export let BlogEntryComputedMixin = {
       return this.blogEntry.fields.previewImage.fields.file.url
     },
     tags() {
-      return this.blogEntry.metadata.tags
+      return this.blogEntry.metadata?.tags
     },
     headline() {
       return this.blogEntry.fields.headline

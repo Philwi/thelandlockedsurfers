@@ -11,9 +11,6 @@ import imagePath from '@/assets/womo-nature.jpg'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  setup() {
-
-  },
   computed: {
     imageSrcAndStyling() {
       return `background-image:url('${imagePath}'); height: 60vh; max-height:460px;`

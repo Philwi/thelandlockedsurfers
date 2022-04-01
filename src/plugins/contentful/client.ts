@@ -12,7 +12,7 @@ const CONTENTFUL_HOST = import.meta.env?.VITE_CONTENTFUL_HOST || process.env.VIT
 const contentfulClient = createClient(contentfulConfig())
 
 function contentfulConfig() {
-  if (import.meta?.env?.MODE == 'development') {
+  if (import.meta?.env?.MODE == '!development') {
     return {
       accessToken: CONTENTFUL_PREVIEW_API_TOKEN,
       space: CONTENTFUL_SPACE_ID,

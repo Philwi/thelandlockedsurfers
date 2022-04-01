@@ -2,9 +2,9 @@
 template(v-if="isVideo()")
   video.container.w-full.max-w-6xl.mx-auto.bg-white.bg-cover.mt-8.rounded.object-contain.my-12(
     :src="imageSrcUrl"
-    autoplay=""
-    loop=""
-    muted=""
+    autoplay=true
+    loop=true
+    muted=true
   )
 template(v-else)
   img.container.w-full.max-w-6xl.mx-auto.bg-white.bg-cover.mt-8.rounded.object-contain.my-12(:src="imageSrcUrl")
@@ -24,15 +24,15 @@ export default defineComponent({
     }
   },
   computed: {
-    imageSrcUrl(): string {
+    imageSrcUrl() {
       return this.textElement.data.target.fields.file.url
     },
-    contentType(): string {
+    contentType() {
       return this.textElement.data.target.fields.file.contentType
     }
   },
   methods: {
-    isVideo(): boolean {
+    isVideo() {
       return this.contentType.includes('video')
     }
   }
