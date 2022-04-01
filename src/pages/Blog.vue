@@ -23,6 +23,7 @@
 <script lang="ts">
 import { blogStore } from '@/plugins/store'
 import { defineComponent } from 'vue'
+import Waschbaer from '@/assets/waschbaer.png'
 import BlogTopElement from '@/components/blog/BlogTopElement.vue'
 import CardForIndex from '@/components/blog/CardForIndex.vue'
 import FirstMainElement from '@/components/blog/FirstMainElement.vue'
@@ -34,7 +35,7 @@ import TwoElements from '@/components/blog/TwoElements.vue'
 export default defineComponent({
   name: 'BlogIndexPage',
   components: {
-    BlogTopElement, CardForIndex, FirstMainElement, ThreeElements, TwoElements, RightMoreSpaceThanLeft, SearchElement
+    BlogTopElement, CardForIndex, FirstMainElement, ThreeElements, TwoElements, RightMoreSpaceThanLeft, SearchElement, Waschbaer
   },
   setup() {
     const store = blogStore()
@@ -51,7 +52,7 @@ export default defineComponent({
                 fields: {
                   name: 'Philena',
                   file: {
-                    url: 'src/assets/waschbaer.png'
+                    url: Waschbaer
                   }
                 }
               }
@@ -71,7 +72,7 @@ export default defineComponent({
           previewImage: {
             fields: {
               file: {
-                url: 'src/assets/waschbaer.png'
+                url: Waschbaer
               }
             }
           },
