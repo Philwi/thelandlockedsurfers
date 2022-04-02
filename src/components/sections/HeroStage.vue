@@ -12,7 +12,7 @@ section.pt-24.flex.flex-col.justify-center.text-center.px-4.bg-secondary(class='
       | Doch jetzt soll alles anders werden! Wir wollen in den Süden. Seid mit dabei!
     .font-montserrat
       PrimaryButton(text="Zu den Erlebnissen" path="/blog")
-      SecondaryButton(text="Unterstütze uns" path='https://www.etsy.com/de/shop/saltypotatostore' anotherPage="true")
+      SecondaryButton(text="Unterstütze uns" path='https://www.etsy.com/de/shop/saltypotatostore' anotherPage=true)
   .flex.justify-around.mt-8(class='md:block md:mt-0 md:flex-1')
     .relative
       img.absolute.-top-16.-left-10(src='../../assets/Highlight1.svg' alt='')
