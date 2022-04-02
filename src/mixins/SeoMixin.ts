@@ -1,3 +1,4 @@
+import { blogStore } from '@/plugins/store'
 import { rootStore } from '@/plugins/store'
 
 export let SeoMixin = {
@@ -48,7 +49,8 @@ export let SeoMixin = {
       return title
     },
     getBlogEntryTitle(id: string): string {
-      const blogEntry = this.store.getBlogEntries.find(entry => entry.sys.id === id)
+      const store = blogStore()
+      const blogEntry = store.getBlogEntries.find(entry => entry.sys.id === id)
       return blogEntry?.fields?.headline
     },
     setCurrentPageToStore(title: string, path: string) {
