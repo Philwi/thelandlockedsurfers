@@ -1,12 +1,6 @@
-import { blogStore } from '@/plugins/store'
 import { rootStore } from '@/plugins/store'
 
 export let SeoMixin = {
-  setup() {
-    const store = blogStore()
-    const currentPageStore = rootStore()
-    return { currentPageStore, store }
-  },
   watch: {
     $route: {
       immediate: true,
@@ -58,6 +52,7 @@ export let SeoMixin = {
       return blogEntry?.fields?.headline
     },
     setCurrentPageToStore(title: string, path: string) {
+      const currentPageStore = rootStore()
       const url = `https://www.thelandlockedsurfers.com${path}`
 
       const currentPage = {
@@ -65,7 +60,7 @@ export let SeoMixin = {
         title: 'The Landlocked Surfers',
         description: title
       }
-      this.currentPageStore.setCurrentPage(currentPage)
+      currentPageStore.setCurrentPage(currentPage)
     }
   }
 }
