@@ -1,0 +1,136 @@
+{
+  "fullPath": "/blog/countdown-5-monate?id=7C0uLypoPY3VqqHheDF53f",
+  "path": "/blog/countdown-5-monate",
+  "query": {
+    "id": "7C0uLypoPY3VqqHheDF53f"
+  },
+  "hash": "",
+  "params": {
+    "id": "countdown-5-monate"
+  },
+  "matched": [
+    {
+      "path": "/blog/:id",
+      "meta": {
+        "title": "Blog Post"
+      },
+      "props": {
+        "default": false
+      },
+      "children": [],
+      "instances": {
+        "default": null
+      },
+      "leaveGuards": {},
+      "updateGuards": {},
+      "enterCallbacks": {},
+      "components": {
+        "default": {
+          "name": "BlogPostPage",
+          "components": {
+            "BlogPostHeader": {
+              "name": "BlogPostHeader",
+              "props": {
+                "headline": {
+                  "0": false,
+                  "1": true,
+                  "required": true
+                },
+                "createdAt": {
+                  "0": false,
+                  "1": true,
+                  "required": true
+                },
+                "previewImageUrl": {
+                  "0": false,
+                  "1": true,
+                  "required": true
+                }
+              },
+              "computed": {},
+              "__hmrId": "7f98763e",
+              "__file": "/home/oimelbude/Projects/personal/thelandlockedsurfers/src/components/blog-post/Header.vue"
+            },
+            "ImageElement": {
+              "props": {
+                "textElement": {
+                  "0": false,
+                  "1": true,
+                  "required": true,
+                  "content": {}
+                }
+              },
+              "computed": {},
+              "methods": {},
+              "__hmrId": "75d0bc75",
+              "__file": "/home/oimelbude/Projects/personal/thelandlockedsurfers/src/components/blog-post/ImageElement.vue"
+            },
+            "HeadingElement": {
+              "props": {
+                "textElement": {
+                  "0": false,
+                  "1": true,
+                  "required": true,
+                  "content": {}
+                }
+              },
+              "computed": {},
+              "__hmrId": "48522b24",
+              "__file": "/home/oimelbude/Projects/personal/thelandlockedsurfers/src/components/blog-post/HeadingElement.vue"
+            },
+            "Heading2Element": {
+              "props": {
+                "textElement": {
+                  "0": false,
+                  "1": true,
+                  "required": true,
+                  "content": {}
+                }
+              },
+              "computed": {},
+              "__hmrId": "73670f70",
+              "__file": "/home/oimelbude/Projects/personal/thelandlockedsurfers/src/components/blog-post/Heading2Element.vue"
+            },
+            "ParagraphElement": {
+              "props": {
+                "textElement": {
+                  "0": false,
+                  "1": true,
+                  "required": true,
+                  "content": {}
+                }
+              },
+              "__hmrId": "08ebe482",
+              "__file": "/home/oimelbude/Projects/personal/thelandlockedsurfers/src/components/blog-post/ParagraphElement.vue"
+            },
+            "UnorderedListElement": {
+              "props": {
+                "textElement": {
+                  "required": true,
+                  "content": {}
+                }
+              },
+              "methods": {},
+              "__hmrId": "30e40204",
+              "__file": "/home/oimelbude/Projects/personal/thelandlockedsurfers/src/components/blog-post/UnorderedListElement.vue"
+            }
+          },
+          "mixins": [
+            {
+              "computed": {},
+              "methods": {}
+            }
+          ],
+          "computed": {},
+          "methods": {},
+          "__hmrId": "0bc5b306",
+          "__file": "/home/oimelbude/Projects/personal/thelandlockedsurfers/src/pages/BlogPost.vue"
+        }
+      }
+    }
+  ],
+  "meta": {
+    "title": "Blog Post"
+  },
+  "href": "/blog/countdown-5-monate?id=7C0uLypoPY3VqqHheDF53f"
+}

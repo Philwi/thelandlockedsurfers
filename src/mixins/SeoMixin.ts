@@ -1,57 +1,27 @@
 import { blogStore } from '@/plugins/store'
 import { rootStore } from '@/plugins/store'
+import { SeoBuilder } from '@/classes'
 
 export let SeoMixin = {
   watch: {
     $route: {
       immediate: true,
       handler(to, _from) {
-        document.title = this.buildTitle(to)
-        this.description.content = this.buildDescription(to)
-        this.keywords.content = this.buildKeywords(to)
-        this.setCurrentPageToStore(this.buildTitle(to), to.fullPath)
+        const seoBuild = new SeoBuilder(to, this.blogEntryFromId(to?.query?.id))
+        const { title, description, keywords } = seoBuild.build()
+        this.setCurrentPageToStore(title, to.fullPath)
+
+        document.title = title
+        document.querySelector('meta[name="description"]').setAttribute("content", description)
+        document.querySelector('meta[name="keywords"]').setAttribute("content", keywords)
       }
-    }
-  },
-  computed: {
-    defaultDescription(): string {
-      return "The Landlocked Surfers ist ein Blog über uns. Wir sind Magdalena und Philipp aus Dresden. Wir bereiten uns gerade auf unsere Atlantikreise vor. Seid dabei!"
-    },
-    defaultKeywords(): string {
-      return "Landlocked, Surfern, Atlantikreise, Atlantikküste"
-    },
-    description(): string {
-      return document.getElementsByTagName('meta').description
-    },
-    keywords(): string {
-      return document.getElementsByTagName('meta').keywords
     }
   },
   methods: {
-    buildDescription(to: { meta: { description: string }, query: { id: string } }): string {
-      if (!!to.meta.description) return to.meta.description
-      return this.defaultDescription
-    },
-    buildKeywords(to: { meta: { keywords: string }, query: { id: string } }): string {
-      if (!!to.meta.keywords) return to.meta.keywords
-      return this.defaultKeywords
-    },
-    buildTitle(to: { meta: { title: string }, query: { id: string } }): string {
-      const title = 'The Landlocked Surfers'
-      let blogTitle = ''
-
-      if (to.query.id) {
-        blogTitle = this.getBlogEntryTitle(to.query.id)
-      }
-
-      if (!!blogTitle) return `${title} - ${to.meta.title} | ${blogTitle}`
-      if (to.meta.title) return `${title} - ${to.meta.title}`
-      return title
-    },
-    getBlogEntryTitle(id: string): string {
+    blogEntryFromId(id: string): any {
       const store = blogStore()
-      const blogEntry = store.getBlogEntries.find(entry => entry.sys.id === id)
-      return blogEntry?.fields?.headline
+
+      return store.getBlogEntries.find(entry => entry.sys.id === id)
     },
     setCurrentPageToStore(title: string, path: string) {
       const currentPageStore = rootStore()

@@ -1,0 +1,677 @@
+{
+  "fullPath": "/blog",
+  "path": "/blog",
+  "query": {},
+  "hash": "",
+  "params": {},
+  "matched": [
+    {
+      "path": "/blog",
+      "meta": {
+        "title": "Blog Übersicht",
+        "description": "Auf unserem Blog erfahrt ihr alle Neuigkeiten von uns rund um die Themen Surfen, Wohnmobil und Reisen. Unsere Katze Winnie ist immer mit dabei. :)",
+        "keywords": "Surfen, Wohnmobil, Reisen, Katzen"
+      },
+      "props": {
+        "default": false
+      },
+      "children": [],
+      "instances": {},
+      "leaveGuards": {},
+      "updateGuards": {},
+      "enterCallbacks": {},
+      "components": {
+        "default": {
+          "name": "BlogIndexPage",
+          "components": {
+            "BlogTopElement": {
+              "computed": {},
+              "__hmrId": "0b58a314",
+              "__file": "/home/oimelbude/Projects/personal/thelandlockedsurfers/src/components/blog/BlogTopElement.vue"
+            },
+            "CardForIndex": {
+              "components": {
+                "StyledTag": {
+                  "name": "TagsForBlogPosts",
+                  "mixins": [
+                    {
+                      "computed": {}
+                    }
+                  ],
+                  "props": {
+                    "tagName": {
+                      "0": false,
+                      "1": true,
+                      "required": true
+                    }
+                  },
+                  "__hmrId": "52b02648",
+                  "__file": "/home/oimelbude/Projects/personal/thelandlockedsurfers/src/components/blog-tags/StyledTag.vue"
+                },
+                "VLazyImage": {
+                  "props": {
+                    "src": {
+                      "0": false,
+                      "1": true,
+                      "required": true
+                    },
+                    "srcPlaceholder": {
+                      "0": false,
+                      "1": true,
+                      "default": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                    },
+                    "srcset": {
+                      "0": false,
+                      "1": true
+                    },
+                    "intersectionOptions": {
+                      "0": false,
+                      "1": true
+                    },
+                    "usePicture": {
+                      "0": true,
+                      "1": true,
+                      "default": false
+                    }
+                  },
+                  "inheritAttrs": false
+                }
+              },
+              "mixins": [
+                {
+                  "computed": {},
+                  "methods": {}
+                },
+                {
+                  "props": {
+                    "blogEntry": {
+                      "0": false,
+                      "1": true,
+                      "required": true,
+                      "fields": {
+                        "author": {
+                          "fields": {
+                            "age": {},
+                            "name": {},
+                            "avatar": {
+                              "fields": {
+                                "title": {},
+                                "file": {
+                                  "url": {}
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "createdAt": {},
+                        "headline": {},
+                        "locationCreate": {
+                          "lat": {},
+                          "lon": {}
+                        },
+                        "previewImage": {
+                          "fields": {
+                            "title": {},
+                            "file": {
+                              "url": {}
+                            }
+                          }
+                        },
+                        "text": {
+                          "content": {}
+                        },
+                        "readingTime": {}
+                      },
+                      "metadata": {
+                        "tags": {}
+                      },
+                      "sys": {
+                        "id": {}
+                      }
+                    }
+                  }
+                }
+              ],
+              "props": {
+                "responsiveClass": {
+                  "0": false,
+                  "1": true,
+                  "default": "md:w-1/3"
+                }
+              },
+              "__hmrId": "35ac9b46",
+              "__file": "/home/oimelbude/Projects/personal/thelandlockedsurfers/src/components/blog/CardForIndex.vue"
+            },
+            "FirstMainElement": {
+              "components": {
+                "StyledTag": {
+                  "name": "TagsForBlogPosts",
+                  "mixins": [
+                    {
+                      "computed": {}
+                    }
+                  ],
+                  "props": {
+                    "tagName": {
+                      "0": false,
+                      "1": true,
+                      "required": true
+                    }
+                  },
+                  "__hmrId": "52b02648",
+                  "__file": "/home/oimelbude/Projects/personal/thelandlockedsurfers/src/components/blog-tags/StyledTag.vue"
+                },
+                "VLazyImage": {
+                  "props": {
+                    "src": {
+                      "0": false,
+                      "1": true,
+                      "required": true
+                    },
+                    "srcPlaceholder": {
+                      "0": false,
+                      "1": true,
+                      "default": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                    },
+                    "srcset": {
+                      "0": false,
+                      "1": true
+                    },
+                    "intersectionOptions": {
+                      "0": false,
+                      "1": true
+                    },
+                    "usePicture": {
+                      "0": true,
+                      "1": true,
+                      "default": false
+                    }
+                  },
+                  "inheritAttrs": false
+                }
+              },
+              "mixins": [
+                {
+                  "computed": {},
+                  "methods": {}
+                },
+                {
+                  "props": {
+                    "blogEntry": {
+                      "0": false,
+                      "1": true,
+                      "required": true,
+                      "fields": {
+                        "author": {
+                          "fields": {
+                            "age": {},
+                            "name": {},
+                            "avatar": {
+                              "fields": {
+                                "title": {},
+                                "file": {
+                                  "url": {}
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "createdAt": {},
+                        "headline": {},
+                        "locationCreate": {
+                          "lat": {},
+                          "lon": {}
+                        },
+                        "previewImage": {
+                          "fields": {
+                            "title": {},
+                            "file": {
+                              "url": {}
+                            }
+                          }
+                        },
+                        "text": {
+                          "content": {}
+                        },
+                        "readingTime": {}
+                      },
+                      "metadata": {
+                        "tags": {}
+                      },
+                      "sys": {
+                        "id": {}
+                      }
+                    }
+                  }
+                }
+              ],
+              "__hmrId": "0a0a7d80",
+              "__file": "/home/oimelbude/Projects/personal/thelandlockedsurfers/src/components/blog/FirstMainElement.vue"
+            },
+            "ThreeElements": {
+              "components": {
+                "CardForIndex": {
+                  "components": {
+                    "StyledTag": {
+                      "name": "TagsForBlogPosts",
+                      "mixins": [
+                        {
+                          "computed": {}
+                        }
+                      ],
+                      "props": {
+                        "tagName": {
+                          "0": false,
+                          "1": true,
+                          "required": true
+                        }
+                      },
+                      "__hmrId": "52b02648",
+                      "__file": "/home/oimelbude/Projects/personal/thelandlockedsurfers/src/components/blog-tags/StyledTag.vue"
+                    },
+                    "VLazyImage": {
+                      "props": {
+                        "src": {
+                          "0": false,
+                          "1": true,
+                          "required": true
+                        },
+                        "srcPlaceholder": {
+                          "0": false,
+                          "1": true,
+                          "default": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        },
+                        "srcset": {
+                          "0": false,
+                          "1": true
+                        },
+                        "intersectionOptions": {
+                          "0": false,
+                          "1": true
+                        },
+                        "usePicture": {
+                          "0": true,
+                          "1": true,
+                          "default": false
+                        }
+                      },
+                      "inheritAttrs": false
+                    }
+                  },
+                  "mixins": [
+                    {
+                      "computed": {},
+                      "methods": {}
+                    },
+                    {
+                      "props": {
+                        "blogEntry": {
+                          "0": false,
+                          "1": true,
+                          "required": true,
+                          "fields": {
+                            "author": {
+                              "fields": {
+                                "age": {},
+                                "name": {},
+                                "avatar": {
+                                  "fields": {
+                                    "title": {},
+                                    "file": {
+                                      "url": {}
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "createdAt": {},
+                            "headline": {},
+                            "locationCreate": {
+                              "lat": {},
+                              "lon": {}
+                            },
+                            "previewImage": {
+                              "fields": {
+                                "title": {},
+                                "file": {
+                                  "url": {}
+                                }
+                              }
+                            },
+                            "text": {
+                              "content": {}
+                            },
+                            "readingTime": {}
+                          },
+                          "metadata": {
+                            "tags": {}
+                          },
+                          "sys": {
+                            "id": {}
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "props": {
+                    "responsiveClass": {
+                      "0": false,
+                      "1": true,
+                      "default": "md:w-1/3"
+                    }
+                  },
+                  "__hmrId": "35ac9b46",
+                  "__file": "/home/oimelbude/Projects/personal/thelandlockedsurfers/src/components/blog/CardForIndex.vue"
+                }
+              },
+              "props": {
+                "blogEntries": {
+                  "0": false,
+                  "1": true,
+                  "required": true
+                }
+              },
+              "__hmrId": "6dfb4ef8",
+              "__file": "/home/oimelbude/Projects/personal/thelandlockedsurfers/src/components/blog/ThreeElements.vue"
+            },
+            "TwoElements": {
+              "components": {
+                "CardForIndex": {
+                  "components": {
+                    "StyledTag": {
+                      "name": "TagsForBlogPosts",
+                      "mixins": [
+                        {
+                          "computed": {}
+                        }
+                      ],
+                      "props": {
+                        "tagName": {
+                          "0": false,
+                          "1": true,
+                          "required": true
+                        }
+                      },
+                      "__hmrId": "52b02648",
+                      "__file": "/home/oimelbude/Projects/personal/thelandlockedsurfers/src/components/blog-tags/StyledTag.vue"
+                    },
+                    "VLazyImage": {
+                      "props": {
+                        "src": {
+                          "0": false,
+                          "1": true,
+                          "required": true
+                        },
+                        "srcPlaceholder": {
+                          "0": false,
+                          "1": true,
+                          "default": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        },
+                        "srcset": {
+                          "0": false,
+                          "1": true
+                        },
+                        "intersectionOptions": {
+                          "0": false,
+                          "1": true
+                        },
+                        "usePicture": {
+                          "0": true,
+                          "1": true,
+                          "default": false
+                        }
+                      },
+                      "inheritAttrs": false
+                    }
+                  },
+                  "mixins": [
+                    {
+                      "computed": {},
+                      "methods": {}
+                    },
+                    {
+                      "props": {
+                        "blogEntry": {
+                          "0": false,
+                          "1": true,
+                          "required": true,
+                          "fields": {
+                            "author": {
+                              "fields": {
+                                "age": {},
+                                "name": {},
+                                "avatar": {
+                                  "fields": {
+                                    "title": {},
+                                    "file": {
+                                      "url": {}
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "createdAt": {},
+                            "headline": {},
+                            "locationCreate": {
+                              "lat": {},
+                              "lon": {}
+                            },
+                            "previewImage": {
+                              "fields": {
+                                "title": {},
+                                "file": {
+                                  "url": {}
+                                }
+                              }
+                            },
+                            "text": {
+                              "content": {}
+                            },
+                            "readingTime": {}
+                          },
+                          "metadata": {
+                            "tags": {}
+                          },
+                          "sys": {
+                            "id": {}
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "props": {
+                    "responsiveClass": {
+                      "0": false,
+                      "1": true,
+                      "default": "md:w-1/3"
+                    }
+                  },
+                  "__hmrId": "35ac9b46",
+                  "__file": "/home/oimelbude/Projects/personal/thelandlockedsurfers/src/components/blog/CardForIndex.vue"
+                }
+              },
+              "props": {
+                "blogEntries": {
+                  "0": false,
+                  "1": true,
+                  "required": true
+                }
+              },
+              "__hmrId": "2dba6566",
+              "__file": "/home/oimelbude/Projects/personal/thelandlockedsurfers/src/components/blog/TwoElements.vue"
+            },
+            "RightMoreSpaceThanLeft": {
+              "components": {
+                "CardForIndex": {
+                  "components": {
+                    "StyledTag": {
+                      "name": "TagsForBlogPosts",
+                      "mixins": [
+                        {
+                          "computed": {}
+                        }
+                      ],
+                      "props": {
+                        "tagName": {
+                          "0": false,
+                          "1": true,
+                          "required": true
+                        }
+                      },
+                      "__hmrId": "52b02648",
+                      "__file": "/home/oimelbude/Projects/personal/thelandlockedsurfers/src/components/blog-tags/StyledTag.vue"
+                    },
+                    "VLazyImage": {
+                      "props": {
+                        "src": {
+                          "0": false,
+                          "1": true,
+                          "required": true
+                        },
+                        "srcPlaceholder": {
+                          "0": false,
+                          "1": true,
+                          "default": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        },
+                        "srcset": {
+                          "0": false,
+                          "1": true
+                        },
+                        "intersectionOptions": {
+                          "0": false,
+                          "1": true
+                        },
+                        "usePicture": {
+                          "0": true,
+                          "1": true,
+                          "default": false
+                        }
+                      },
+                      "inheritAttrs": false
+                    }
+                  },
+                  "mixins": [
+                    {
+                      "computed": {},
+                      "methods": {}
+                    },
+                    {
+                      "props": {
+                        "blogEntry": {
+                          "0": false,
+                          "1": true,
+                          "required": true,
+                          "fields": {
+                            "author": {
+                              "fields": {
+                                "age": {},
+                                "name": {},
+                                "avatar": {
+                                  "fields": {
+                                    "title": {},
+                                    "file": {
+                                      "url": {}
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "createdAt": {},
+                            "headline": {},
+                            "locationCreate": {
+                              "lat": {},
+                              "lon": {}
+                            },
+                            "previewImage": {
+                              "fields": {
+                                "title": {},
+                                "file": {
+                                  "url": {}
+                                }
+                              }
+                            },
+                            "text": {
+                              "content": {}
+                            },
+                            "readingTime": {}
+                          },
+                          "metadata": {
+                            "tags": {}
+                          },
+                          "sys": {
+                            "id": {}
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "props": {
+                    "responsiveClass": {
+                      "0": false,
+                      "1": true,
+                      "default": "md:w-1/3"
+                    }
+                  },
+                  "__hmrId": "35ac9b46",
+                  "__file": "/home/oimelbude/Projects/personal/thelandlockedsurfers/src/components/blog/CardForIndex.vue"
+                }
+              },
+              "props": {
+                "blogEntries": {
+                  "0": false,
+                  "1": true,
+                  "required": true
+                }
+              },
+              "__hmrId": "3f14a2aa",
+              "__file": "/home/oimelbude/Projects/personal/thelandlockedsurfers/src/components/blog/RightMoreSpaceThanLeft.vue"
+            },
+            "SearchElement": {
+              "components": {
+                "StyledTag": {
+                  "name": "TagsForBlogPosts",
+                  "mixins": [
+                    {
+                      "computed": {}
+                    }
+                  ],
+                  "props": {
+                    "tagName": {
+                      "0": false,
+                      "1": true,
+                      "required": true
+                    }
+                  },
+                  "__hmrId": "52b02648",
+                  "__file": "/home/oimelbude/Projects/personal/thelandlockedsurfers/src/components/blog-tags/StyledTag.vue"
+                },
+                "CloseCircle": {
+                  "name": ""
+                },
+                "PlusCircle": {
+                  "name": ""
+                }
+              },
+              "computed": {},
+              "watch": {},
+              "methods": {},
+              "__hmrId": "414b6212",
+              "__file": "/home/oimelbude/Projects/personal/thelandlockedsurfers/src/components/blog/SearchElement.vue"
+            },
+            "Waschbaer": "/src/assets/waschbaer.png"
+          },
+          "computed": {},
+          "methods": {},
+          "__hmrId": "501d0d46",
+          "__file": "/home/oimelbude/Projects/personal/thelandlockedsurfers/src/pages/Blog.vue"
+        }
+      }
+    }
+  ],
+  "meta": {
+    "title": "Blog Übersicht",
+    "description": "Auf unserem Blog erfahrt ihr alle Neuigkeiten von uns rund um die Themen Surfen, Wohnmobil und Reisen. Unsere Katze Winnie ist immer mit dabei. :)",
+    "keywords": "Surfen, Wohnmobil, Reisen, Katzen"
+  },
+  "href": "/blog"
+}
