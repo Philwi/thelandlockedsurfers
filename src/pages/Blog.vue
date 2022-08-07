@@ -1,5 +1,5 @@
 <template lang="pug">
-.font-sans.leading-normal.tracking-normal
+.font-sans.leading-normal.tracking-normal.bg-secondary
   BlogTopElement
   .container.px-4.max-w-6xl.mx-auto(class='-mt-32 md:px-0')
     .mx-0(class='sm:mx-6')

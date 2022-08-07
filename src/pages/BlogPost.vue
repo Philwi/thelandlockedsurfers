@@ -1,11 +1,12 @@
 <template lang="pug">
 template(v-if="!!blogEntry")
-  BlogPostHeader(:previewImageUrl="previewImageUrl" :headline="headline" :createdAt='createdAt')
-  .container.max-w-5xl.mx-auto.-mt-32
-    .mx-0(class='sm:mx-6')
-      .bg-white.w-full.p-8.text-xl.text-gray-800.leading-normal(class='md:p-24 md:text-2xl' style='font-family:Georgia,serif;')
-        template(v-for="textElement in blogEntryTextElements")
-          component(:is="decideWhichTextElementToRender(textElement)" :textElement="textElement")
+  .bg-secondary
+    BlogPostHeader(:previewImageUrl="previewImageUrl" :headline="headline" :createdAt='createdAt')
+    .container.max-w-5xl.mx-auto.-mt-32
+      .mx-0(class='sm:mx-6')
+        .bg-secondary.w-full.p-8.text-xl.text-gray-800.leading-normal(class='md:p-24 md:text-2xl' style='font-family:Georgia,serif;')
+          template(v-for="textElement in blogEntryTextElements")
+            component(:is="decideWhichTextElementToRender(textElement)" :textElement="textElement")
 </template>
 
 <script lang="ts">
