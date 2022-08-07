@@ -9,17 +9,19 @@ section.bg-black.sectionSize
       Instagram.mx-2
     a(href='https://github.com/Philwi/thelandlockedsurfers' target="_blank" rel="nofollow")
       Github.mx-2
+    a(href='https://linktr.ee/saltypotato' target="_blank" rel="nofollow")
+      Link.mx-2
   .text-white.font-montserrat.text-sm
     | &copy; {{ currentYear }} The Landlocked Surfers. All rights reserved
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { Gmail, Instagram, Github } from 'mdue'
+import { Gmail, Instagram, Github, Link } from 'mdue'
 
 export default defineComponent({
   components: {
-    Gmail, Instagram, Github
+    Gmail, Instagram, Github, Link
   },
   computed: {
     currentYear() {
