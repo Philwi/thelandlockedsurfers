@@ -1,7 +1,7 @@
 <template lang="pug">
 section.sectionSize.bg-secondary.py-12
   div
-    h2.secondaryTitle.bg-underline4.mb-0(class='bg-100%') Merch
+    h2.secondaryTitle.bg-underline4.mb-0(class='bg-100%') Shop
   .flex.w-full.flex-col(class='xl:flex-row')
     template(v-for="element in cardElements")
       Card(

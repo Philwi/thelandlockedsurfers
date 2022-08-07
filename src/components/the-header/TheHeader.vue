@@ -18,7 +18,7 @@ nav.fixed.flex.justify-between.py-6.w-full.px-4.content-center.bg-secondary.z-20
   ul.font-montserrat.flex.flex-col.mx-8.my-24.items-center.text-3xl
     template(v-for="link in navigationLinks")
       li.my-6
-        template(v-if="link.text == 'Merch'")
+        template(v-if="link.text == 'Shop'")
           a(:href="link.path" @click="toggleMenu" target="_blank" rel="nofollow") {{ link.text }}
         template(v-else)
           RouterLink(:to='link.path' @click="toggleMenu") {{ link.text }}
@@ -40,11 +40,15 @@ export default defineComponent({
           path: '/blog'
         },
         {
+          text: 'Unsere Route',
+          path: '/unsere-route'
+        },
+        {
           text: 'Wir für Euch',
           path: '/wir-fuer-euch'
         },
         {
-          text: 'Merch',
+          text: 'Shop',
           path: 'https://saltypotato1.myspreadshop.de',
           target: '_blank'
         },

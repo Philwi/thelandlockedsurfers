@@ -16,7 +16,7 @@ describe('Header Test', () => {
       .and("contain", "/blog")
 
     cy.get('a')
-      .contains('Merch')
+      .contains('Shop')
       .should("have.attr", "href")
       .should("not.be.empty")
       .and("contain", "https://saltypotato1.myspreadshop.de");

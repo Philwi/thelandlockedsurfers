@@ -3,6 +3,7 @@ import { blogStore } from '@/plugins/store'
 import Blog from '@/pages/Blog.vue'
 import BlogPost from '@/pages/BlogPost.vue'
 import Index from '@/pages/Index.vue'
+import PolarSteps from '@/pages/PolarSteps.vue'
 import WeForYou from '@/pages/WeForYou.vue'
 
 const routes = [
@@ -15,6 +16,7 @@ const routes = [
     }
   },
   { path: '/blog/:id', component: BlogPost, meta: { title: 'Blog Post' } },
+  { path: '/unsere-route', component: PolarSteps, meta: { title: 'Verfolge unsere Reise' } },
   { path: '/wir-fuer-euch', component: WeForYou,
     meta: {
       title: 'Wir für Euch!',

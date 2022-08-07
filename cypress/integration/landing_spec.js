@@ -52,7 +52,7 @@ describe('Landing Page Test', () => {
   })
 
   it('Tests merch section', () => {
-    cy.get('h2').contains('Merch')
+    cy.get('h2').contains('Shop')
     cy.get('h3').contains('Medusa T-Shirt')
     cy.get('button').contains('Kaufen 27 €')
     cy.get('h3').contains('Sushi T-Shirt')
