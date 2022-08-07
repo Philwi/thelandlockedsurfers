@@ -14,7 +14,7 @@ section.sectionSize.items-start.pt-8.bg-black.text-white(class='md:pt-36')
   .w-full.py-4.cursor-pointer(@click="toggleSubElement('shop')")
     .flex.justify-between.items-center
       .font-montserrat.font-medium.mr-auto
-        | Habt ihr auch einen eigenen Shop und nicht nur Etsy?
+        | Habt ihr auch einen eigenen Shop und nicht nur Spreadshirt?
       img.transform.transition-transform(src='../../assets/logos/CaretRight.svg' alt='')
     .font-montserrat.text-sm.font-extralight.pb-8.hidden(ref="shop")
       | Es ist in Arbeit, aber dauert noch ein bisschen.

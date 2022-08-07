@@ -41,7 +41,7 @@ section.pt-24.flex.flex-col.justify-center.text-center.px-4.bg-secondary.w-full(
         | Gefällt dir eine Arbeit von Lena besonders gut oder hast du eine einzigartige Idee für ein neues T-Shirt Design, aber dir fehlt
         | das Handwerkszeug um dieser Idee Leben einzuhauchen. Dann ist Lena die richtige Person.
         |
-        a.underline(href='https://www.etsy.com/de/shop/saltypotatostore' target="_blank" rel="nofollow")
+        a.underline(href='https://saltypotato1.myspreadshop.de' target="_blank" rel="nofollow")
           | Hier findest du bereits existierende T-Shirt Designs.
 
 </template>

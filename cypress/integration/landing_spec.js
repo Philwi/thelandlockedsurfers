@@ -13,7 +13,7 @@ describe('Landing Page Test', () => {
       .contains('Unterstütze uns')
       .should("have.attr", "href")
       .should("not.be.empty")
-      .and("contain", "https://www.etsy.com/de/shop/saltypotatostore");
+      .and("contain", "https://saltypotato1.myspreadshop.de");
 
     cy.get('h1').contains('The Landlocked Surfers')
     cy.get('p').contains('Wir hissen unsere Segel!')
@@ -65,7 +65,7 @@ describe('Landing Page Test', () => {
     cy.get('h2').contains('FAQ')
     cy.get('div').contains('Wie kann ich euch erreichen?')
     cy.get('div').contains('Einfach per Mail (thelandlockedsurfers@gmail.com) oder Socialmedia. :)')
-    cy.get('div').contains('Habt ihr auch einen eigenen Shop und nicht nur Etsy?')
+    cy.get('div').contains('Habt ihr auch einen eigenen Shop und nicht nur Spreadshirt?')
     cy.get('div').contains('Wie kann ich euch unterstützen?')
   })
 })

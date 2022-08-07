@@ -19,6 +19,6 @@ describe('Header Test', () => {
       .contains('Merch')
       .should("have.attr", "href")
       .should("not.be.empty")
-      .and("contain", "https://www.etsy.com/de/shop/saltypotatostore");
+      .and("contain", "https://saltypotato1.myspreadshop.de");
   })
 })

@@ -4,7 +4,7 @@
     | {{ headline }}
   VLazyImage.object-cover.h-72(:src='imageSrc')
   button(@click="goToShop").border-2.border-solid.border-black.rounded-xl.text-lg.py-3.mt-4.cursor-pointer
-    | Kaufen {{ price }} €
+    | Kaufen
 </template>
 
 <script lang="ts">
@@ -21,10 +21,6 @@ export default defineComponent({
     },
     imageSrc: {
       type: String,
-      required: true
-    },
-    price: {
-      type: Number,
       required: true
     },
     topAlignment: {

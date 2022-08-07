@@ -7,7 +7,6 @@ section.sectionSize.bg-secondary.py-12
       Card(
         :headline='element.headline'
         :imageSrc="element.imageSrc"
-        :price="element.price"
         :topAlignment="element.topAlignment"
         :url="element.url"
       )
@@ -30,24 +29,21 @@ export default defineComponent({
       cardElements: [
         {
           headline: 'Medusa T-Shirt',
-          price: 27,
           imageSrc: Medusa,
           topAlignment: '24',
-          url: 'https://www.etsy.com/listing/953814049/medusa-t-shirt-bright'
+          url: 'https://saltypotato1.myspreadshop.de/medusa?idea=62dd2f3f960da04313a37335'
         },
         {
           headline: 'Sushi T-Shirt',
-          price: 27,
           imageSrc: Sushi,
           topAlignment: '12',
-          url: 'https://www.etsy.com/listing/953818271/sushi-t-shirt'
+          url: 'https://saltypotato1.myspreadshop.de/sushi+fish?idea=62d86365960da0431359b6b6'
         },
         {
           headline: 'Ice T-Shirt',
-          price: 25,
           imageSrc: Ice,
           topAlignment: '24',
-          url: 'https://www.etsy.com/listing/939847482/ice-back-t-shirt'
+          url: 'https://saltypotato1.myspreadshop.de/ice+cream+girl?idea=62d471b30e214d0b7a731785'
         }
       ]
     }

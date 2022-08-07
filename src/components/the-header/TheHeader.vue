@@ -45,7 +45,7 @@ export default defineComponent({
         },
         {
           text: 'Merch',
-          path: 'https://www.etsy.com/de/shop/saltypotatostore',
+          path: 'https://saltypotato1.myspreadshop.de',
           target: '_blank'
         },
       ],
