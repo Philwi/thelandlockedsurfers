@@ -8,7 +8,7 @@ section.pt-24.flex.flex-col.justify-center.text-center.px-4.bg-secondary(class='
     p.font-pt-serif.font-normal.mb-7
       | Wir hissen unsere Segel!
       | Und planen eine Reise in unserem Wohnmobil.
-      | Mit unserer Katze Winnie wohnen wir seit einem Jahr mobil in und um Dresden.
+      | Mit unserer Katze Winnie wohnen wir seit Oktober 2020 mobil in und um Dresden.
       | Doch jetzt soll alles anders werden! Wir wollen in den Süden. Seid mit dabei!
     .font-montserrat
       PrimaryButton(text="Zu den Erlebnissen" path="/blog")
